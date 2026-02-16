@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="CarSphere - Your premier car dealership offering latest models from Honda, Toyota, Suzuki. Expert financing, warranties, and unbeatable deals.">
+  <meta name="keywords"
+    content="car dealership, Honda, Toyota, Suzuki, auto financing, car warranty, new cars, CarSphere">
+  <meta name="author" content="CarSphere">
+  <meta property="og:title" content="CarSphere - Premium Car Dealership">
+  <meta property="og:description"
+    content="Discover the latest car models with flexible financing and comprehensive warranties">
+  <meta property="og:type" content="website">
+  <title>CarSphere - Premium Car Dealership</title>
+
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M15 65 L15 55 Q15 45 25 45 L35 45 L45 25 L75 25 L85 45 L90 45 Q95 45 95 55 L95 65 Z' fill='orangered'/%3E%3Ccircle cx='30' cy='65' r='10' fill='black'/%3E%3Ccircle cx='75' cy='65' r='10' fill='black'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loader"></div>
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="assets/images/logo/CarSphere.webp" alt="CarSphere Logo" style="height: 60px; margin-right: 10px;">
+        CarSphere
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#brands">Brands</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalogue">Catalogue</a></li>
+          <li class="nav-item"><a class="nav-link" href="#warranty">Warranty</a></li>
+          <li class="nav-item"><a class="nav-link" href="#finance">Finance</a></li>
+          <li class="nav-item"><a class="nav-link" href="#comparison">Compare</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 hero-content">
+          <h1 class="hero-title">
+            Drive Your Dreams
+            <span>CarSphere</span>
+          </h1>
+          <p class="hero-subtitle">
+            Premium car dealership partnered with GOODYEAR. Discover the latest models with unbeatable deals, flexible
+            financing, and comprehensive warranties.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <button class="btn btn-primary-custom"
+              onclick="document.getElementById('catalogue').scrollIntoView({behavior: 'smooth'})">
+              Browse Cars <i class="bi bi-arrow-right ms-2"></i>
+            </button>
+            <button class="btn btn-outline-custom"
+              onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+              Contact Us
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&h=600&fit=crop" alt="Luxury Car"
+            class="img-fluid" style="border-radius: 20px; box-shadow: 0 20px 60px rgba(255, 69, 0, 0.2);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">About CarSphere</h2>
+        <p class="section-subtitle">Your trusted partner in automotive excellence since collaboration with GOODYEAR</p>
+      </div>
+      <div class="row mb-5">
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1562519819-016a2b12c501?w=700&h=500&fit=crop"
+            alt="CarSphere Showroom" class="img-fluid rounded shadow-lg">
+        </div>
+        <div class="col-lg-6 d-flex align-items-center">
+          <div>
+            <h3 class="mb-4" style="font-size: 2.5rem;">Your Dream Car Destination</h3>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+              CarSphere started as a collaboration with <strong>GOODYEAR</strong> and has evolved into a premier
+              automotive dealership with showrooms across the city. We specialize in all types of cars and motors,
+              offering the latest models from world-renowned brands.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+              Our commitment to exceptional service, transparent pricing, and customer satisfaction has attracted
+              thousands of happy customers. From browsing to financing to after-sales support, we make car ownership a
+              hassle-free experience.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="stats-card text-center">
+            <div class="stats-number">10+</div>
+            <div class="stats-label">Years Experience</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card text-center">
+            <div class="stats-number">5000+</div>
+            <div class="stats-label">Happy Customers</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card text-center">
+            <div class="stats-number">15+</div>
+            <div class="stats-label">Car Brands</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card text-center">
+            <div class="stats-number">8</div>
+            <div class="stats-label">City Showrooms</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="brands-section" id="brands">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Our Premium Brands</h2>
+        <p class="section-subtitle">Authorized dealers for the world's leading automotive brands</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="brand-card">
+            <img src="https://logos-world.net/wp-content/uploads/2021/03/Honda-Logo.png" alt="Honda Logo"
+              class="brand-logo">
+            <h4 class="mb-3">Honda</h4>
+            <p class="text-white">Premium Japanese engineering with models like Civic, Accord, CR-V</p>
+            <button class="btn btn-outline-custom btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#dealerModal"
+              data-brand="Honda">
+              Find Dealers <i class="bi bi-geo-alt ms-2"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="brand-card">
+            <img src="https://logos-world.net/wp-content/uploads/2020/04/Toyota-Logo.png" alt="Toyota Logo"
+              class="brand-logo">
+            <h4 class="mb-3">Toyota</h4>
+            <p class="text-white">Reliable and durable vehicles - Corolla, Camry, Land Cruiser</p>
+            <button class="btn btn-outline-custom btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#dealerModal"
+              data-brand="Toyota">
+              Find Dealers <i class="bi bi-geo-alt ms-2"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="brand-card">
+            <img src="https://logos-world.net/wp-content/uploads/2021/10/Suzuki-Logo.png" alt="Suzuki Logo"
+              class="brand-logo">
+            <h4 class="mb-3">Suzuki</h4>
+            <p class="text-white">Affordable and efficient - Swift, Wagon R, Alto, Cultus</p>
+            <button class="btn btn-outline-custom btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#dealerModal"
+              data-brand="Suzuki">
+              Find Dealers <i class="bi bi-geo-alt ms-2"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="brand-card">
+            <img src="https://logos-world.net/wp-content/uploads/2020/05/Hyundai-Logo.png" alt="Hyundai Logo"
+              class="brand-logo">
+            <h4 class="mb-3">Hyundai</h4>
+            <p class="text-white">Modern technology and design - Elantra, Tucson, Sonata</p>
+            <button class="btn btn-outline-custom btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#dealerModal"
+              data-brand="Hyundai">
+              Find Dealers <i class="bi bi-geo-alt ms-2"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="brand-card">
+            <img src="https://logos-world.net/wp-content/uploads/2021/04/Kia-Logo.png" alt="Kia Logo"
+              class="brand-logo">
+            <h4 class="mb-3">Kia</h4>
+            <p class="text-white">Stylish and feature-rich - Sportage, Sorento, Picanto</p>
+            <button class="btn btn-outline-custom btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#dealerModal"
+              data-brand="Kia">
+              Find Dealers <i class="bi bi-geo-alt ms-2"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="brand-card">
+            <img src="https://logos-world.net/wp-content/uploads/2020/09/Nissan-Logo.png" alt="Nissan Logo"
+              class="brand-logo">
+            <h4 class="mb-3">Nissan</h4>
+            <p class="text-white">Innovative mobility - Altima, X-Trail, Patrol</p>
+            <button class="btn btn-outline-custom btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#dealerModal"
+              data-brand="Nissan">
+              Find Dealers <i class="bi bi-geo-alt ms-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="catalogue-section" id="catalogue">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Our Car Catalogue</h2>
+        <p class="section-subtitle">Explore our extensive collection of premium vehicles</p>
+      </div>
+
+
+      <div class="filter-section">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Brand</label>
+            <select class="form-select" id="brandFilter">
+              <option value="">All Brands</option>
+              <option value="Honda">Honda</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Suzuki">Suzuki</option>
+              <option value="Hyundai">Hyundai</option>
+              <option value="Kia">Kia</option>
+              <option value="Nissan">Nissan</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Price Range</label>
+            <select class="form-select" id="priceFilter">
+              <option value="">All Prices</option>
+              <option value="0-2000000">Under PKR 20 Lakh</option>
+              <option value="2000000-4000000">PKR 20-40 Lakh</option>
+              <option value="4000000-6000000">PKR 40-60 Lakh</option>
+              <option value="6000000-10000000">PKR 60 Lakh - 1 Crore</option>
+              <option value="10000000-99999999">Above 1 Crore</option>
+            </select>
+          </div>
+          <div class="col-md-4 d-flex align-items-end">
+            <button class="btn btn-primary-custom w-100" onclick="filterCars()">
+              <i class="bi bi-search me-2"></i>Search
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row g-4" id="carGrid">
+
+        <div class="col-md-4 car-item" data-brand="Honda" data-price="6500000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?w=500&h=300&fit=crop"
+              alt="Honda Civic" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Honda Civic 2025</h3>
+              <div class="car-price">PKR 65,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>1.5L Turbo</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>CVT</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>16 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Honda Civic 2025" data-price="PKR 65,00,000"
+                data-image="https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&h=500&fit=crop"
+                data-engine="1.5L Turbo Engine" data-power="180 HP" data-transmission="CVT Automatic"
+                data-mileage="16 kmpl" data-features="LED Headlights, Sunroof, Leather Seats, Honda Sensing">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Honda" data-price="12500000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1600358363744-3d4ab53d01f1?w=500&h=300&fit=crop"
+              alt="Honda Accord" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Honda Accord 2025</h3>
+              <div class="car-price">PKR 1,25,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>2.0L Turbo</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>10-Speed Auto</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>14 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Honda Accord 2025" data-price="PKR 1,25,00,000"
+                data-image="https://images.unsplash.com/photo-1600358363744-3d4ab53d01f1?w=800&h=500&fit=crop"
+                data-engine="2.0L Turbo Engine" data-power="252 HP" data-transmission="10-Speed Automatic"
+                data-mileage="14 kmpl" data-features="Premium Sound System, Wireless Charging, Adaptive Cruise Control">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Toyota" data-price="4500000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=500&h=300&fit=crop"
+              alt="Toyota Corolla" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Toyota Corolla 2025</h3>
+              <div class="car-price">PKR 45,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>1.8L</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>CVT</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>18 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Toyota Corolla 2025" data-price="PKR 45,00,000"
+                data-image="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&h=500&fit=crop"
+                data-engine="1.8L Engine" data-power="138 HP" data-transmission="CVT Automatic" data-mileage="18 kmpl"
+                data-features="Toyota Safety Sense, Smart Entry, Push Start, Touchscreen Display">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Toyota" data-price="11000000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=500&h=300&fit=crop"
+              alt="Toyota Camry" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Toyota Camry 2025</h3>
+              <div class="car-price">PKR 1,10,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>2.5L Hybrid</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>E-CVT</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>22 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Toyota Camry 2025" data-price="PKR 1,10,00,000"
+                data-image="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&h=500&fit=crop"
+                data-engine="2.5L Hybrid Engine" data-power="208 HP" data-transmission="E-CVT" data-mileage="22 kmpl"
+                data-features="Hybrid Technology, JBL Sound, Panoramic Sunroof, Digital Cockpit">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Suzuki" data-price="1800000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1552519507-13875162f666?w=500&h=300&fit=crop"
+              alt="Suzuki Wagon R" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Suzuki Wagon R 2025</h3>
+              <div class="car-price">PKR 18,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>1.0L</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>5-Speed Manual</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>22 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Suzuki Wagon R 2025" data-price="PKR 18,00,000"
+                data-image="https://images.unsplash.com/photo-1552519507-13875162f666?w=800&h=500&fit=crop"
+                data-engine="1.0L Engine" data-power="67 HP" data-transmission="5-Speed Manual" data-mileage="22 kmpl"
+                data-features="Spacious Interior, Fuel Efficient, Power Windows, Central Locking">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Suzuki" data-price="3200000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=500&h=300&fit=crop"
+              alt="Suzuki Swift" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Suzuki Swift 2025</h3>
+              <div class="car-price">PKR 32,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>1.2L</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>CVT</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>20 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Suzuki Swift 2025" data-price="PKR 32,00,000"
+                data-image="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=500&fit=crop"
+                data-engine="1.2L Engine" data-power="82 HP" data-transmission="CVT Automatic" data-mileage="20 kmpl"
+                data-features="Sporty Design, Touchscreen Infotainment, Alloy Wheels, Keyless Entry">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Hyundai" data-price="6800000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1614963326505-843868e1c611?w=500&h=300&fit=crop"
+              alt="Hyundai Elantra" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Hyundai Elantra 2025</h3>
+              <div class="car-price">PKR 68,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>2.0L</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>CVT</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>15 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Hyundai Elantra 2025" data-price="PKR 68,00,000"
+                data-image="https://images.unsplash.com/photo-1614963326505-843868e1c611?w=800&h=500&fit=crop"
+                data-engine="2.0L Engine" data-power="147 HP" data-transmission="CVT Automatic" data-mileage="15 kmpl"
+                data-features="SmartSense Safety, Digital Cluster, Bose Audio, Ambient Lighting">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Hyundai" data-price="9500000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=500&h=300&fit=crop"
+              alt="Hyundai Tucson" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Hyundai Tucson 2025</h3>
+              <div class="car-price">PKR 95,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>2.5L</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>8-Speed Auto</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>13 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Hyundai Tucson 2025" data-price="PKR 95,00,000"
+                data-image="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop"
+                data-engine="2.5L Engine" data-power="187 HP" data-transmission="8-Speed Automatic"
+                data-mileage="13 kmpl" data-features="AWD System, 360° Camera, Wireless CarPlay, Power Tailgate">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Kia" data-price="8500000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=500&h=300&fit=crop"
+              alt="Kia Sportage" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Kia Sportage 2025</h3>
+              <div class="car-price">PKR 85,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>2.0L</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>8-Speed Auto</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>14 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Kia Sportage 2025" data-price="PKR 85,00,000"
+                data-image="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=500&fit=crop"
+                data-engine="2.0L Engine" data-power="177 HP" data-transmission="8-Speed Automatic"
+                data-mileage="14 kmpl" data-features="Dual Panoramic Sunroof, Blind Spot Monitor, Lane Keep Assist">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Nissan" data-price="7200000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1583267746897-0942b29f8a92?w=500&h=300&fit=crop"
+              alt="Nissan Altima" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Nissan Altima 2025</h3>
+              <div class="car-price">PKR 72,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>2.5L</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>CVT</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>15 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Nissan Altima 2025" data-price="PKR 72,00,000"
+                data-image="https://images.unsplash.com/photo-1583267746897-0942b29f8a92?w=800&h=500&fit=crop"
+                data-engine="2.5L Engine" data-power="188 HP" data-transmission="CVT Automatic" data-mileage="15 kmpl"
+                data-features="ProPILOT Assist, Remote Start, Apple CarPlay, Android Auto">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Nissan" data-price="10500000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1611859266238-4b98091d9d9b?w=500&h=300&fit=crop"
+              alt="Nissan X-Trail" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Nissan X-Trail 2025</h3>
+              <div class="car-price">PKR 1,05,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>2.5L</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>CVT</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>13 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Nissan X-Trail 2025" data-price="PKR 1,05,00,000"
+                data-image="https://images.unsplash.com/photo-1611859266238-4b98091d9d9b?w=800&h=500&fit=crop"
+                data-engine="2.5L Engine" data-power="181 HP" data-transmission="CVT Automatic" data-mileage="13 kmpl"
+                data-features="7-Seater, Intelligent AWD, Around View Monitor, Tri-Zone Climate">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 car-item" data-brand="Kia" data-price="2500000">
+          <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=500&h=300&fit=crop"
+              alt="Kia Picanto" class="car-image">
+            <div class="car-body">
+              <h3 class="car-title">Kia Picanto 2025</h3>
+              <div class="car-price">PKR 25,00,000</div>
+              <div class="car-features">
+                <span class="feature-badge"><i class="bi bi-speedometer2 me-1"></i>1.0L</span>
+                <span class="feature-badge"><i class="bi bi-gear me-1"></i>4-Speed Auto</span>
+                <span class="feature-badge"><i class="bi bi-fuel-pump me-1"></i>21 kmpl</span>
+              </div>
+              <button class="view-details-btn" data-bs-toggle="modal" data-bs-target="#carDetailModal"
+                data-name="Kia Picanto 2025" data-price="PKR 25,00,000"
+                data-image="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&h=500&fit=crop"
+                data-engine="1.0L Engine" data-power="67 HP" data-transmission="4-Speed Automatic"
+                data-mileage="21 kmpl" data-features="Compact Size, City-Friendly, Touchscreen, Rear Parking Sensors">
+                View Details <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="warranty-section" id="warranty">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Warranty Schemes</h2>
+        <p class="section-subtitle">Comprehensive coverage for your peace of mind</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="warranty-card">
+            <i class="bi bi-shield-check warranty-icon"></i>
+            <h3 class="warranty-title">Honda & Toyota Warranty</h3>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>3 Years</strong> or
+                <strong>100,000 KM</strong> comprehensive warranty</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Engine and transmission covered</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Free roadside assistance</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>24/7 customer support</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Extended warranty available</li>
+            </ul>
+            <button class="btn btn-outline-custom mt-3" data-bs-toggle="modal" data-bs-target="#warrantyModal"
+              data-brand="Honda/Toyota">
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="warranty-card">
+            <i class="bi bi-shield-check warranty-icon"></i>
+            <h3 class="warranty-title">Suzuki Warranty</h3>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>2 Years</strong> or
+                <strong>40,000 KM</strong> manufacturer warranty</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Major components covered</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Authorized service centers</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Genuine parts guarantee</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Affordable maintenance packages</li>
+            </ul>
+            <button class="btn btn-outline-custom mt-3" data-bs-toggle="modal" data-bs-target="#warrantyModal"
+              data-brand="Suzuki">
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="warranty-card">
+            <i class="bi bi-shield-check warranty-icon"></i>
+            <h3 class="warranty-title">Hyundai & Kia Warranty</h3>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>5 Years</strong> or
+                <strong>150,000 KM</strong> industry-leading warranty</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Bumper-to-bumper coverage</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>10-year powertrain warranty</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Free scheduled maintenance</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Lifetime hybrid battery warranty</li>
+            </ul>
+            <button class="btn btn-outline-custom mt-3" data-bs-toggle="modal" data-bs-target="#warrantyModal"
+              data-brand="Hyundai/Kia">
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="warranty-card">
+            <i class="bi bi-shield-check warranty-icon"></i>
+            <h3 class="warranty-title">Nissan Warranty</h3>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>3 Years</strong> or
+                <strong>100,000 KM</strong> basic warranty</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>5-year powertrain warranty</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Corrosion warranty included</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Complimentary first service</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Transferable to second owner</li>
+            </ul>
+            <button class="btn btn-outline-custom mt-3" data-bs-toggle="modal" data-bs-target="#warrantyModal"
+              data-brand="Nissan">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="finance-section" id="finance">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Financing Partners</h2>
+        <p class="section-subtitle">Flexible payment options with leading banks - Up to 60% financing available</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="bank-card">
+            <img src="https://logos-world.net/wp-content/uploads/2020/11/Bank-Al-Habib-Logo.png" alt="Bank Al Habib"
+              class="bank-logo">
+            <h5 class="mt-3">Bank Al Habib</h5>
+            <p class="text-white small">Competitive rates</p>
+            <button class="btn btn-outline-custom btn-sm" data-bs-toggle="modal" data-bs-target="#financeModal"
+              data-bank="Bank Al Habib">
+              View Details
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="bank-card">
+            <img src="https://logos-world.net/wp-content/uploads/2021/03/HBL-Logo.png" alt="HBL" class="bank-logo">
+            <h5 class="mt-3">HBL</h5>
+            <p class="text-white small">Fast approval</p>
+            <button class="btn btn-outline-custom btn-sm" data-bs-toggle="modal" data-bs-target="#financeModal"
+              data-bank="HBL">
+              View Details
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="bank-card">
+            <img src="https://logos-world.net/wp-content/uploads/2021/03/MCB-Logo.png" alt="MCB Bank" class="bank-logo">
+            <h5 class="mt-3">MCB Bank</h5>
+            <p class="text-white small">Flexible terms</p>
+            <button class="btn btn-outline-custom btn-sm" data-bs-toggle="modal" data-bs-target="#financeModal"
+              data-bank="MCB Bank">
+              View Details
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="bank-card">
+            <img src="https://logos-world.net/wp-content/uploads/2021/03/Allied-Bank-Logo.png" alt="Allied Bank"
+              class="bank-logo">
+            <h5 class="mt-3">Allied Bank</h5>
+            <p class="text-white small">Low markup</p>
+            <button class="btn btn-outline-custom btn-sm" data-bs-toggle="modal" data-bs-target="#financeModal"
+              data-bank="Allied Bank">
+              View Details
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="bank-card">
+            <img src="https://logos-world.net/wp-content/uploads/2021/03/UBL-Logo.png" alt="UBL" class="bank-logo">
+            <h5 class="mt-3">UBL</h5>
+            <p class="text-white small">Easy process</p>
+            <button class="btn btn-outline-custom btn-sm" data-bs-toggle="modal" data-bs-target="#financeModal"
+              data-bank="UBL">
+              View Details
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="bank-card">
+            <img src="https://logos-world.net/wp-content/uploads/2021/03/Meezan-Bank-Logo.png" alt="Meezan Bank"
+              class="bank-logo">
+            <h5 class="mt-3">Meezan Bank</h5>
+            <p class="text-white small">Islamic financing</p>
+            <button class="btn btn-outline-custom btn-sm" data-bs-toggle="modal" data-bs-target="#financeModal"
+              data-bank="Meezan Bank">
+              View Details
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="bank-card">
+            <img src="https://logos-world.net/wp-content/uploads/2021/03/Standard-Chartered-Logo.png"
+              alt="Standard Chartered" class="bank-logo">
+            <h5 class="mt-3">Standard Chartered</h5>
+            <p class="text-white small">Premium service</p>
+            <button class="btn btn-outline-custom btn-sm" data-bs-toggle="modal" data-bs-target="#financeModal"
+              data-bank="Standard Chartered">
+              View Details
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="bank-card">
+            <img src="https://logos-world.net/wp-content/uploads/2021/03/Faysal-Bank-Logo.png" alt="Faysal Bank"
+              class="bank-logo">
+            <h5 class="mt-3">Faysal Bank</h5>
+            <p class="text-white small">Great rates</p>
+            <button class="btn btn-outline-custom btn-sm" data-bs-toggle="modal" data-bs-target="#financeModal"
+              data-bank="Faysal Bank">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="comparison-section" id="comparison">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Compare Cars</h2>
+        <p class="section-subtitle">Make an informed decision with side-by-side comparison</p>
+      </div>
+      <div class="comparison-container">
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Select First Car</label>
+            <select class="form-select" id="compareCar1">
+              <option value="">Choose...</option>
+              <option value="civic">Honda Civic 2025</option>
+              <option value="accord">Honda Accord 2025</option>
+              <option value="corolla">Toyota Corolla 2025</option>
+              <option value="camry">Toyota Camry 2025</option>
+              <option value="wagonr">Suzuki Wagon R 2025</option>
+              <option value="swift">Suzuki Swift 2025</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Select Second Car</label>
+            <select class="form-select" id="compareCar2">
+              <option value="">Choose...</option>
+              <option value="civic">Honda Civic 2025</option>
+              <option value="accord">Honda Accord 2025</option>
+              <option value="corolla">Toyota Corolla 2025</option>
+              <option value="camry">Toyota Camry 2025</option>
+              <option value="wagonr">Suzuki Wagon R 2025</option>
+              <option value="swift">Suzuki Swift 2025</option>
+            </select>
+          </div>
+          <div class="col-md-4 d-flex align-items-end">
+            <button class="btn btn-primary-custom w-100" onclick="compareCars()">
+              <i class="bi bi-arrow-left-right me-2"></i>Compare
+            </button>
+          </div>
+        </div>
+        <div id="comparisonResult" class="comparison-table"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="video-section" id="video">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Experience CarSphere</h2>
+        <p class="section-subtitle">Take a virtual tour of our state-of-the-art showrooms</p>
+      </div>
+      <div class="video-container">
+        <iframe width="100%" height="600" src="https://www.youtube.com/embed/Wh_dv1EORkQ?si=cCjDdRoSq8_DlZXF"
+          title="CarSphere Showroom Tour" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen style="border-radius: 20px;">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">We're here to help you find your perfect car</p>
+      </div>
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="contact-card text-center">
+            <i class="bi bi-geo-alt contact-icon"></i>
+            <h5 class="mb-3">Visit Us</h5>
+            <p>CarSphere Headquarters<br>Plot 123, Main Boulevard<br>Karachi, Pakistan</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-card text-center">
+            <i class="bi bi-telephone contact-icon"></i>
+            <h5 class="mb-3">Call Us</h5>
+            <p>Sales: +92-321-1234567<br>Service: +92-321-7654321<br>Mon-Sat: 9AM - 8PM</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-card text-center">
+            <i class="bi bi-envelope contact-icon"></i>
+            <h5 class="mb-3">Email Us</h5>
+            <p>info@carSphere.com<br>sales@carSphere.com<br>support@carSphere.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3 class="mb-4 text-center">Send Us A Message</h3>
+        <form>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" placeholder="Enter your phone" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Interested In</label>
+              <select class="form-select" required>
+                <option value="">Select...</option>
+                <option value="buying">Buying a Car</option>
+                <option value="finance">Finance Options</option>
+                <option value="service">Service & Warranty</option>
+                <option value="other">Other Inquiry</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" placeholder="Tell us how we can help..." required></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary-custom">
+                <i class="bi bi-send me-2"></i>Send Message
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h5>CarSphere</h5>
+          <p class="text-white">Your trusted partner in automotive excellence. Premium cars, exceptional service, and
+            unbeatable deals since our partnership with GOODYEAR.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#brands">Brands</a></li>
+            <li><a href="#catalogue">Catalogue</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="#warranty">Warranty Schemes</a></li>
+            <li><a href="#finance">Finance Options</a></li>
+            <li><a href="#comparison">Car Comparison</a></li>
+            <li><a href="#">Test Drive</a></li>
+            <li><a href="#">Trade-In</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Newsletter</h5>
+          <p class="text-white">Subscribe to get latest deals and updates</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary-custom">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 CarSphere. All Rights Reserved. | Partnered with GOODYEAR | Privacy Policy | Terms of Service</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <button class="back-to-top" id="backToTop">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+
+
+
+  <div class="modal fade" id="carDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="carDetailTitle">Car Details</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img id="carDetailImage" src="" alt="Car" class="detail-image">
+          <h4 id="carDetailName" class="mb-3"></h4>
+          <h5 id="carDetailPrice" class="text-danger mb-4"></h5>
+          <h6 class="mb-3">Specifications</h6>
+          <ul class="specs-list" id="carSpecs"></ul>
+          <h6 class="mb-3 mt-4">Key Features</h6>
+          <p id="carFeatures"></p>
+          <div class="text-center mt-4">
+            <button class="btn btn-primary-custom me-3"
+              onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); bootstrap.Modal.getInstance(document.getElementById('carDetailModal')).hide();">
+              <i class="bi bi-calendar-check me-2"></i>Book Test Drive
+            </button>
+            <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#financeModal">
+              <i class="bi bi-calculator me-2"></i>Calculate Finance
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="dealerModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="dealerModalTitle">Find Dealers</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4" id="dealerList">
+            <div class="col-md-6">
+              <div class="p-4 border rounded">
+                <h5 class="text-danger mb-3"><i class="bi bi-geo-alt me-2"></i>Main Boulevard Showroom</h5>
+                <p><strong>Address:</strong> Plot 123, Main Boulevard, Karachi</p>
+                <p><strong>Phone:</strong> +92-321-1234567</p>
+                <p><strong>Hours:</strong> Mon-Sat: 9AM - 8PM</p>
+                <button class="btn btn-outline-custom btn-sm">Get Directions</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-4 border rounded">
+                <h5 class="text-danger mb-3"><i class="bi bi-geo-alt me-2"></i>Clifton Showroom</h5>
+                <p><strong>Address:</strong> Sea View Road, Clifton, Karachi</p>
+                <p><strong>Phone:</strong> +92-321-2345678</p>
+                <p><strong>Hours:</strong> Mon-Sat: 9AM - 8PM</p>
+                <button class="btn btn-outline-custom btn-sm">Get Directions</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-4 border rounded">
+                <h5 class="text-danger mb-3"><i class="bi bi-geo-alt me-2"></i>DHA Showroom</h5>
+                <p><strong>Address:</strong> Phase 5, DHA, Karachi</p>
+                <p><strong>Phone:</strong> +92-321-3456789</p>
+                <p><strong>Hours:</strong> Mon-Sat: 9AM - 8PM</p>
+                <button class="btn btn-outline-custom btn-sm">Get Directions</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-4 border rounded">
+                <h5 class="text-danger mb-3"><i class="bi bi-geo-alt me-2"></i>Gulshan Showroom</h5>
+                <p><strong>Address:</strong> Rashid Minhas Road, Gulshan, Karachi</p>
+                <p><strong>Phone:</strong> +92-321-4567890</p>
+                <p><strong>Hours:</strong> Mon-Sat: 9AM - 8PM</p>
+                <button class="btn btn-outline-custom btn-sm">Get Directions</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="warrantyModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="warrantyModalTitle">Warranty Details</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="warrantyContent">
+          <h5 class="mb-3">Coverage Details</h5>
+          <p>Comprehensive warranty coverage for your peace of mind. All major components, systems, and parts are
+            covered under our manufacturer's warranty program.</p>
+          <h6 class="mt-4 mb-3">What's Covered:</h6>
+          <ul>
+            <li>Engine and Transmission</li>
+            <li>Electrical Systems</li>
+            <li>Suspension Components</li>
+            <li>Brake Systems</li>
+            <li>Air Conditioning</li>
+            <li>All Factory-Installed Parts</li>
+          </ul>
+          <h6 class="mt-4 mb-3">Warranty Conditions:</h6>
+          <ul>
+            <li>Regular scheduled maintenance must be performed</li>
+            <li>Use of genuine parts and authorized service centers</li>
+            <li>Warranty is transferable to second owner</li>
+            <li>24/7 roadside assistance included</li>
+            <li>Extended warranty plans available</li>
+          </ul>
+          <div class="alert alert-info mt-4">
+            <i class="bi bi-info-circle me-2"></i>For detailed warranty terms and conditions, please contact our
+            customer service team.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="financeModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="financeModalTitle">Finance Scheme Details</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="mb-4">CarSphere Finance Program</h5>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="p-4 bg-light rounded">
+                <h6 class="text-danger mb-3">Financing Terms</h6>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Down Payment:</strong>
+                    40% of car price</li>
+                  <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Loan Amount:</strong> Up
+                    to 60% financed</li>
+                  <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Interest Rate:</strong>
+                    Starting from 14% p.a.</li>
+                  <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Loan Tenure:</strong> 1-5
+                    years</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-4 bg-light rounded">
+                <h6 class="text-danger mb-3">Required Documents</h6>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-file-text me-2"></i>CNIC copy</li>
+                  <li class="mb-2"><i class="bi bi-file-text me-2"></i>Salary slips (last 3 months)</li>
+                  <li class="mb-2"><i class="bi bi-file-text me-2"></i>Bank statements (last 6 months)</li>
+                  <li class="mb-2"><i class="bi bi-file-text me-2"></i>Proof of residence</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 p-4 border rounded">
+            <h6 class="mb-3">Calculate Your Monthly Installment</h6>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Car Price (PKR)</label>
+                <input type="number" class="form-control" id="carPrice" placeholder="5000000">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Loan Period (Years)</label>
+                <select class="form-select" id="loanPeriod">
+                  <option value="1">1 Year</option>
+                  <option value="2">2 Years</option>
+                  <option value="3" selected>3 Years</option>
+                  <option value="4">4 Years</option>
+                  <option value="5">5 Years</option>
+                </select>
+              </div>
+              <div class="col-md-4 d-flex align-items-end">
+                <button class="btn btn-primary-custom w-100" onclick="calculateFinance()">
+                  Calculate
+                </button>
+              </div>
+            </div>
+            <div id="financeResult" class="mt-4"></div>
+          </div>
+          <div class="alert alert-warning mt-4">
+            <i class="bi bi-exclamation-triangle me-2"></i>Approval is subject to bank's terms and conditions. Interest
+            rates may vary based on credit profile.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="assets/script.js" defer></script>
+</body>
+
+</html>

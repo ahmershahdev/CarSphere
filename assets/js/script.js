@@ -14,20 +14,6 @@ $(window).scroll(function () {
   }
 });
 
-$(".nav-link").click(function (e) {
-  const target = $(this).attr("href");
-  if (target.startsWith("#")) {
-    e.preventDefault();
-    $("html, body").animate(
-      {
-        scrollTop: $(target).offset().top - 70,
-      },
-      800,
-    );
-    $(".navbar-collapse").collapse("hide");
-  }
-});
-
 $("#backToTop").click(function () {
   $("html, body").animate({ scrollTop: 0 }, 800);
 });

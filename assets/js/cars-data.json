@@ -1,0 +1,393 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2024,
+      "price": 3500000,
+      "image": "assets/images/cars/honda/honda-1.avif",
+      "features": [
+        "1.8L Engine",
+        "Automatic Transmission",
+        "Dual Airbags",
+        "Touch Screen Infotainment",
+        "Backup Camera",
+        "Power Windows",
+        "Air Conditioning"
+      ],
+      "dealer": "CarSphere Karachi",
+      "location": "Karachi",
+      "warranty": "3 Years / 100,000 KM"
+    },
+    {
+      "id": 2,
+      "brand": "Honda",
+      "model": "City",
+      "year": 2024,
+      "price": 2800000,
+      "image": "assets/images/cars/honda/honda-2.avif",
+      "features": [
+        "1.5L Engine",
+        "Manual Transmission",
+        "Dual Airbags",
+        "Power Steering",
+        "Electric Mirrors",
+        "AM/FM Radio",
+        "Air Conditioning"
+      ],
+      "dealer": "CarSphere Lahore",
+      "location": "Lahore",
+      "warranty": "3 Years / 100,000 KM"
+    },
+    {
+      "id": 3,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2024,
+      "price": 4200000,
+      "image": "assets/images/cars/toyota/toyota-1.avif",
+      "features": [
+        "1.6L Engine",
+        "Automatic Transmission",
+        "ABS Brakes",
+        "Stability Control",
+        "Touchscreen Display",
+        "Rear Parking Sensor",
+        "Digital Cluster"
+      ],
+      "dealer": "CarSphere Karachi",
+      "location": "Karachi",
+      "warranty": "3 Years / 100,000 KM"
+    },
+    {
+      "id": 4,
+      "brand": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2024,
+      "price": 25000000,
+      "image": "assets/images/cars/toyota/toyota-2.avif",
+      "features": [
+        "4.6L V8 Engine",
+        "Automatic Transmission",
+        "All-Wheel Drive",
+        "Premium Leather Interior",
+        "Sunroof",
+        "Navigation System",
+        "Power Lift Gate"
+      ],
+      "dealer": "CarSphere Islamabad",
+      "location": "Islamabad",
+      "warranty": "3 Years / 150,000 KM"
+    },
+    {
+      "id": 5,
+      "brand": "BMW",
+      "model": "3 Series",
+      "year": 2024,
+      "price": 12000000,
+      "image": "assets/images/cars/bmw/bmw-1.avif",
+      "features": [
+        "2.0L Turbocharged Engine",
+        "8-Speed Automatic",
+        "Adaptive Suspension",
+        "Premium Sound System",
+        "Fully Digital Dashboard",
+        "Power Sunroof",
+        "Panoramic Roof Option"
+      ],
+      "dealer": "CarSphere Karachi",
+      "location": "Karachi",
+      "warranty": "5 Years / 100,000 KM"
+    },
+    {
+      "id": 6,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2024,
+      "price": 18000000,
+      "image": "assets/images/cars/bmw/bmw-2.avif",
+      "features": [
+        "3.0L Turbocharged Engine",
+        "Automatic Transmission",
+        "All-Wheel Drive",
+        "Luxury Interior",
+        "Panoramic Sunroof",
+        "Adaptive Cruise Control",
+        "360° Camera System"
+      ],
+      "dealer": "CarSphere Lahore",
+      "location": "Lahore",
+      "warranty": "5 Years / 100,000 KM"
+    },
+    {
+      "id": 7,
+      "brand": "Lamborghini",
+      "model": "Urus",
+      "year": 2024,
+      "price": 80000000,
+      "image": "assets/images/cars/lamborghini/lamborghini-1.avif",
+      "features": [
+        "4.0L Twin-Turbo Engine",
+        "8-Speed Automatic",
+        "All-Wheel Drive",
+        "Carbon Fiber Trim",
+        "Adaptive Aerodynamics",
+        "Advanced Infotainment",
+        "Air Suspension"
+      ],
+      "dealer": "CarSphere Karachi",
+      "location": "Karachi",
+      "warranty": "5 Years / 100,000 KM"
+    },
+    {
+      "id": 8,
+      "brand": "Porsche",
+      "model": "911",
+      "year": 2024,
+      "price": 75000000,
+      "image": "assets/images/cars/porsche/porsche-1.avif",
+      "features": [
+        "3.8L Turbocharged Engine",
+        "8-Speed Automatic",
+        "Rear-Wheel Drive",
+        "Sport Exhaust",
+        "Ceramic Brakes",
+        "Adaptive Suspension",
+        "Digital Cockpit Pro"
+      ],
+      "dealer": "CarSphere Islamabad",
+      "location": "Islamabad",
+      "warranty": "5 Years / 100,000 KM"
+    },
+    {
+      "id": 9,
+      "brand": "Audi",
+      "model": "A4",
+      "year": 2024,
+      "price": 10000000,
+      "image": "assets/images/cars/audi/audi-1.avif",
+      "features": [
+        "2.0L Turbocharged Engine",
+        "7-Speed Automatic",
+        "Front-Wheel Drive",
+        "Quattro AWD Option",
+        "Luxury City Car",
+        "Navigation Plus",
+        "Virtual Cockpit"
+      ],
+      "dealer": "CarSphere Lahore",
+      "location": "Lahore",
+      "warranty": "5 Years / 100,000 KM"
+    },
+    {
+      "id": 10,
+      "brand": "Audi",
+      "model": "Q7",
+      "year": 2024,
+      "price": 22000000,
+      "image": "assets/images/cars/audi/audi-2.avif",
+      "features": [
+        "3.0L Turbocharged Engine",
+        "8-Speed Automatic",
+        "Quattro AWD",
+        "Premium Interior",
+        "Virtual Cockpit",
+        "Bang & Olufsen Sound",
+        "Adaptive Air Suspension"
+      ],
+      "dealer": "CarSphere Karachi",
+      "location": "Karachi",
+      "warranty": "5 Years / 100,000 KM"
+    }
+  ],
+  "warranties": [
+    {
+      "brand": "Honda",
+      "scheme": "Standard Warranty",
+      "duration": "3 Years / 100,000 KM",
+      "coverage": "Manufacturing defects, engine, transmission, electrical components"
+    },
+    {
+      "brand": "Toyota",
+      "scheme": "Toyota Assurance",
+      "duration": "3 Years / 100,000 KM",
+      "coverage": "Full vehicle warranty including engine, transmission, and electronics"
+    },
+    {
+      "brand": "BMW",
+      "scheme": "BMW Premium Care",
+      "duration": "5 Years / 100,000 KM",
+      "coverage": "Comprehensive coverage including scheduled maintenance, wear and tear"
+    },
+    {
+      "brand": "Porsche",
+      "scheme": "Porsche Shield",
+      "duration": "5 Years / 100,000 KM",
+      "coverage": "Complete protection with roadside assistance and concierge service"
+    },
+    {
+      "brand": "Lamborghini",
+      "scheme": "Lamborghini Warranty",
+      "duration": "5 Years / 100,000 KM",
+      "coverage": "Complete warranty with priority service and genuine parts"
+    },
+    {
+      "brand": "Audi",
+      "scheme": "Audi Care Plus",
+      "duration": "5 Years / 100,000 KM",
+      "coverage": "Full coverage including maintenance, repairs, and roadside support"
+    }
+  ],
+  "banks": [
+    {
+      "id": 1,
+      "name": "HBL",
+      "logo": "assets/images/financing partners/hbl.avif",
+      "interestRate": 12.5,
+      "maxLoanAmount": "Up to 60% of car price",
+      "tenure": "Up to 7 years",
+      "emi": "Calculated based on loan amount and tenure",
+      "features": [
+        "Flexible tenure options",
+        "Competitive interest rates",
+        "Quick approval process",
+        "Online application available"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "MCB Bank",
+      "logo": "assets/images/financing partners/mcb_bank.avif",
+      "interestRate": 13.0,
+      "maxLoanAmount": "Up to 60% of car price",
+      "tenure": "Up to 7 years",
+      "emi": "Calculated based on loan amount and tenure",
+      "features": [
+        "Easy documentation",
+        "Same day approval",
+        "No hidden charges",
+        "Life insurance included"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Allied Bank Limited",
+      "logo": "assets/images/financing partners/allied_bank_limited.avif",
+      "interestRate": 11.8,
+      "maxLoanAmount": "Up to 60% of car price",
+      "tenure": "Up to 7 years",
+      "emi": "Calculated based on loan amount and tenure",
+      "features": [
+        "Lowest interest rates",
+        "Hassle-free process",
+        "Flexible repayment options",
+        "Customer support 24/7"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Bank Al Habib",
+      "logo": "assets/images/financing partners/bank_al_habib.avif",
+      "interestRate": 12.0,
+      "maxLoanAmount": "Up to 60% of car price",
+      "tenure": "Up to 7 years",
+      "emi": "Calculated based on loan amount and tenure",
+      "features": [
+        "Sharia compliant options",
+        "Quick disbursement",
+        "Insurance protection",
+        "Dedicated account manager"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Faysal Bank",
+      "logo": "assets/images/financing partners/faysal_bank.avif",
+      "interestRate": 12.8,
+      "maxLoanAmount": "Up to 60% of car price",
+      "tenure": "Up to 7 years",
+      "emi": "Calculated based on loan amount and tenure",
+      "features": [
+        "Islamic banking options",
+        "Competitive rates",
+        "Fast approval",
+        "Value added services"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Meezan Bank",
+      "logo": "assets/images/financing partners/meezan_bank.avif",
+      "interestRate": 11.5,
+      "maxLoanAmount": "Up to 60% of car price",
+      "tenure": "Up to 7 years",
+      "emi": "Calculated based on loan amount and tenure",
+      "features": [
+        "100% Islamic banking",
+        "Competitive pricing",
+        "Flexible terms",
+        "No riba-based financing"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Standard Chartered",
+      "logo": "assets/images/financing partners/standard_chartered.avif",
+      "interestRate": 13.5,
+      "maxLoanAmount": "Up to 60% of car price",
+      "tenure": "Up to 7 years",
+      "emi": "Calculated based on loan amount and tenure",
+      "features": [
+        "Premium banking experience",
+        "Dedicated wealth manager",
+        "Exclusive benefits",
+        "Global banking support"
+      ]
+    }
+  ],
+  "dealers": [
+    {
+      "id": 1,
+      "city": "Karachi",
+      "address": "Showroom Lane, Karachi",
+      "phone": "+92-300-1111111",
+      "brands": ["Honda", "Toyota", "BMW"]
+    },
+    {
+      "id": 2,
+      "city": "Lahore",
+      "address": "Mall Road, Lahore",
+      "phone": "+92-300-2222222",
+      "brands": ["Honda", "Audi", "Porsche"]
+    },
+    {
+      "id": 3,
+      "city": "Islamabad",
+      "address": "F-7 Markaz, Islamabad",
+      "phone": "+92-300-3333333",
+      "brands": ["Toyota", "BMW", "Lamborghini"]
+    },
+    {
+      "id": 4,
+      "city": "Hyderabad",
+      "address": "Latifabad, Hyderabad",
+      "phone": "+92-300-4444444",
+      "brands": ["Honda", "Toyota"]
+    },
+    {
+      "id": 5,
+      "city": "Multan",
+      "address": "Chinar Road, Multan",
+      "phone": "+92-300-5555555",
+      "brands": ["Honda", "Audi"]
+    },
+    {
+      "id": 6,
+      "city": "Peshawar",
+      "address": "Peshawar Cantt, Peshawar",
+      "phone": "+92-300-6666666",
+      "brands": ["Toyota", "BMW"]
+    }
+  ]
+}

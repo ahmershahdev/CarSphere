@@ -1,0 +1,215 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "brand": "BMW",
+      "model": "3 Series",
+      "year": 2026,
+      "price": 12000000,
+      "image": "assets/images/cars/bmw/bmw-logo.avif",
+      "images": [
+        "assets/images/cars/bmw/bmw-logo.avif",
+        "assets/images/cars/bmw/bmw-1.avif",
+        "assets/images/cars/bmw/bmw-2.avif",
+        "assets/images/cars/bmw/bmw-3.avif",
+        "assets/images/cars/bmw/bmw-4.avif"
+      ],
+      "features": [
+        "2.0L Turbocharged Engine",
+        "8-Speed Automatic",
+        "Adaptive Suspension",
+        "Premium Sound System",
+        "Fully Digital Dashboard",
+        "Power Sunroof",
+        "Panoramic Roof Option"
+      ],
+      "dealer": "CarSphere Karachi",
+      "location": "Karachi",
+      "warranty": "5 Years / 100,000 KM"
+    },
+    {
+      "id": 2,
+      "brand": "Audi",
+      "model": "A4",
+      "year": 2026,
+      "price": 11500000,
+      "image": "assets/images/cars/audi/audi-logo.avif",
+      "images": [
+        "assets/images/cars/audi/audi-logo.avif",
+        "assets/images/cars/audi/audi-1.avif",
+        "assets/images/cars/audi/audi-2.avif",
+        "assets/images/cars/audi/audi-3.avif",
+        "assets/images/cars/audi/audi-4.avif"
+      ],
+      "features": [
+        "2.0L TFSI Engine",
+        "7-Speed Automatic",
+        "Virtual Cockpit",
+        "Bang & Olufsen Sound",
+        "LED Headlights",
+        "Sunroof",
+        "Quattro AWD Option"
+      ],
+      "dealer": "CarSphere Lahore",
+      "location": "Lahore",
+      "warranty": "5 Years / 100,000 KM"
+    },
+ 
+    {
+      "id": 3,
+      "brand": "Porsche",
+      "model": "911",
+      "year": 2026,
+      "price": 28000000,
+      "image": "assets/images/cars/porsche/porsche-logo.avif",
+      "images": [
+        "assets/images/cars/porsche/porsche-logo.avif",
+        "assets/images/cars/porsche/porsche-1.avif",
+        "assets/images/cars/porsche/porsche-2.avif",
+        "assets/images/cars/porsche/porsche-3.avif",
+        "assets/images/cars/porsche/porsche-4.avif"
+      ],
+      "features": [
+        "3.8L Turbocharged Engine",
+        "8-Speed Automatic",
+        "Sports Suspension",
+        "Ceramic Brakes",
+        "Carbon Fiber Accents",
+        "Adaptive Aerodynamics",
+        "Push-Button Start"
+      ],
+      "dealer": "CarSphere Lahore",
+      "location": "Lahore",
+      "warranty": "5 Years / 100,000 KM"
+    },
+    
+    {
+      "id": 4,
+      "brand": "Lamborghini",
+      "model": "Urus",
+      "year": 2026,
+      "price": 35000000,
+      "image": "assets/images/cars/lamborghini/lamborghini-logo.avif",
+      "images": [
+        "assets/images/cars/lamborghini/lamborghini-logo.avif",
+        "assets/images/cars/lamborghini/lamborghini-1.avif",
+        "assets/images/cars/lamborghini/lamborghini-2.avif",
+        "assets/images/cars/lamborghini/lamborghini-3.avif",
+        "assets/images/cars/lamborghini/lamborghini-4.avif"
+      ],
+      "features": [
+        "4.0L Twin-Turbo Engine",
+        "8-Speed Automatic",
+        "All-Wheel Drive",
+        "Carbon Fiber Interior",
+        "Adaptive Suspension",
+        "Alcantara Steering Wheel",
+        "22-Inch Alloy Wheels"
+      ],
+      "dealer": "CarSphere Islamabad",
+      "location": "Islamabad",
+      "warranty": "5 Years / 100,000 KM"
+    },
+   
+    
+    {
+      "id": 5,
+      "brand": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2026,
+      "price": 25000000,
+      "image": "assets/images/cars/toyota/toyota-logo.avif",
+      "images": [
+        "assets/images/cars/toyota/toyota-logo.avif",
+        "assets/images/cars/toyota/toyota-1.avif",
+        "assets/images/cars/toyota/toyota-2.avif",
+        "assets/images/cars/toyota/toyota-3.avif",
+        "assets/images/cars/toyota/toyota-4.avif"
+      ],
+      "features": [
+        "4.6L V8 Engine",
+        "Automatic Transmission",
+        "All-Wheel Drive",
+        "Premium Leather Interior",
+        "Sunroof",
+        "Navigation System",
+        "Power Lift Gate"
+      ],
+      "dealer": "CarSphere Islamabad",
+      "location": "Islamabad",
+      "warranty": "3 Years / 150,000 KM"
+    },
+   
+    {
+      "id": 6,
+      "brand": "Honda",
+      "model": "City",
+      "year": 2026,
+      "price": 2800000,
+      "image": "assets/images/cars/honda/honda-logo.avif",
+      "images": [
+        "assets/images/cars/honda/honda-logo.avif",
+        "assets/images/cars/honda/honda-1.avif",
+        "assets/images/cars/honda/honda-2.avif",
+        "assets/images/cars/honda/honda-3.avif",
+        "assets/images/cars/honda/honda-4.avif"
+      ],
+      "features": [
+        "1.5L Engine",
+        "Manual Transmission",
+        "Dual Airbags",
+        "Power Steering",
+        "Electric Mirrors",
+        "AM/FM Radio",
+        "Air Conditioning"
+      ],
+      "dealer": "CarSphere Lahore",
+      "location": "Lahore",
+      "warranty": "3 Years / 100,000 KM"
+    }
+  ],
+  "dealers": [
+    {
+      "id": 1,
+      "city": "Karachi",
+      "address": "Showroom Lane, Karachi",
+      "phone": "+92-21-35834567",
+      "brands": ["Honda", "Toyota", "BMW"]
+    },
+    {
+      "id": 2,
+      "city": "Lahore",
+      "address": "Mall Road, Lahore",
+      "phone": "+92-42-37234891",
+      "brands": ["Honda", "Audi", "Porsche"]
+    },
+    {
+      "id": 3,
+      "city": "Islamabad",
+      "address": "F-7 Markaz, Islamabad",
+      "phone": "+92-51-2345678",
+      "brands": ["Toyota", "BMW", "Lamborghini"]
+    },
+    {
+      "id": 4,
+      "city": "Hyderabad",
+      "address": "Latifabad, Hyderabad",
+      "phone": "+92-221-9834562",
+      "brands": ["Honda", "Toyota"]
+    },
+    {
+      "id": 5,
+      "city": "Multan",
+      "address": "Chinar Road, Multan",
+      "phone": "+92-61-4567321",
+      "brands": ["Honda", "Audi"]
+    },
+    {
+      "id": 6,
+      "city": "Peshawar",
+      "address": "Peshawar Cantt, Peshawar",
+      "phone": "+92-91-5234789",
+      "brands": ["Toyota", "BMW"]
+    }
+  ]
+}

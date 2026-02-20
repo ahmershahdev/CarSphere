@@ -833,107 +833,127 @@
 
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Get In Touch</h2>
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="section-title text-center mb-3">Get In Touch</h2>
+                    <p class="text-center text-white lead">Have questions? We're here to help you find your perfect vehicle.</p>
+                </div>
+            </div>
             <div class="row align-items-center">
-
+                <!-- Contact Form -->
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="contact-form-container">
-                        <h3 class="text-warning mb-4">Send us a Message</h3>
+                        <div class="contact-form-header mb-4">
+                            <i class="bi bi-chat-dots text-primary"></i>
+                            <h3 class="text-warning d-inline-block ms-2">Send us a Message</h3>
+                        </div>
                         <form id="contactForm" class="contact-form">
                             <div class="mb-3">
-                                <label class="form-label text-white">Full Name</label>
+                                <label class="form-label text-white fw-500">Full Name <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control contact-input" id="contactName"
-                                    placeholder="Your Full Name" required>
+                                    placeholder="Syed Ahmer Shah" required>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label text-white">Email Address</label>
+                                <label class="form-label text-white fw-500">Email Address <span class="text-danger">*</span></label>
                                 <input type="email" class="form-control contact-input" id="contactEmail"
                                     placeholder="your.email@example.com" required>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label text-white">Phone Number</label>
-                                <input type="tel" class="form-control contact-input" id="contactPhone"
-                                    placeholder="+92-300-0000000">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-white fw-500">Phone Number</label>
+                                    <input type="tel" class="form-control contact-input" id="contactPhone"
+                                        placeholder="+92-300-0000000">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-white fw-500">Subject <span class="text-danger">*</span></label>
+                                    <select class="form-select contact-input" id="contactSubject" required>
+                                        <option value="">Select a Subject</option>
+                                        <option value="inquiry">Car Inquiry</option>
+                                        <option value="financing">Financing Question</option>
+                                        <option value="test-drive">Test Drive Request</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label text-white">Subject</label>
-                                <select class="form-select contact-input" id="contactSubject" required>
-                                    <option value="">Select a Subject</option>
-                                    <option value="inquiry">Car Inquiry</option>
-                                    <option value="financing">Financing Question</option>
-                                    <option value="test-drive">Test Drive Request</option>
-                                    <option value="feedback">Feedback</option>
-                                    <option value="other">Other</option>
-                                </select>
+                                <label class="form-label text-white fw-500">Your Message <span class="text-danger">*</span></label>
+                                <textarea class="form-control contact-input" id="contactMessage" rows="5"
+                                    placeholder="Tell us about your inquiry..." required></textarea>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label text-white">Message</label>
-                                <textarea class="form-control contact-input" id="contactMessage" rows="4"
-                                    placeholder="Type your message here..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
-                            <div id="contactFormMessage" style="display: none; margin-top: 1rem;"></div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 btn-submit-contact">
+                                <i class="bi bi-send me-2"></i>Send Message
+                            </button>
+                            <div id="contactFormMessage" style="display: none; margin-top: 1rem;" class="alert"></div>
                         </form>
                     </div>
                 </div>
 
-
-                <div class="col-lg-6 ps-lg-5">
+                <!-- Contact Info -->
+                <div class="col-lg-6 ps-lg-4">
                     <div class="contact-info-container">
-                        <h3 class="text-warning mb-4">Contact Information</h3>
+                        <h3 class="text-warning mb-4">
+                            <i class="bi bi-info-circle text-primary me-2"></i>Get in Touch With Us
+                        </h3>
 
-                        <div class="contact-info-item mb-4">
-                            <div class="info-icon">
-                                <i class="bi bi-geo-alt"></i>
+                        <!-- Address -->
+                        <div class="contact-info-item mb-4 p-3 rounded-custom">
+                            <div class="info-icon bg-primary-gradient">
+                                <i class="bi bi-geo-alt-fill"></i>
                             </div>
-                            <div class="info-content">
-                                <h5 class="text-white mb-2">Address</h5>
-                                <p class="text-white">Showroom Lane, Karachi, Pakistan</p>
+                            <div class="info-content flex-grow-1">
+                                <h5 class="text-white mb-2">📍 Address</h5>
+                                <p class="text-white mb-0">Showroom Lane, Karachi, Hyderabad, Pakistan</p>
                             </div>
                         </div>
 
-                        <div class="contact-info-item mb-4">
-                            <div class="info-icon">
-                                <i class="bi bi-telephone"></i>
+                        <!-- Phone -->
+                        <div class="contact-info-item mb-4 p-3 rounded-custom">
+                            <div class="info-icon bg-primary-gradient">
+                                <i class="bi bi-telephone-fill"></i>
                             </div>
-                            <div class="info-content">
-                                <h5 class="text-white mb-2">Phone</h5>
-                                <p class="text-white"><a href="tel:+923000000000"
-                                        class="text-decoration-none text-warning">+92-300-0000000</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-item mb-4">
-                            <div class="info-icon">
-                                <i class="bi bi-envelope"></i>
-                            </div>
-                            <div class="info-content">
-                                <h5 class="text-white mb-2">Email</h5>
-                                <p class="text-white"><a href="mailto:info@CarSphere.com"
-                                        class="text-decoration-none text-warning">info@CarSphere.com</a></p>
+                            <div class="info-content flex-grow-1">
+                                <h5 class="text-white mb-2">📞 Phone</h5>
+                                <p class="text-white mb-0"><a href="tel:+923000000000" class="text-decoration-none text-warning fw-bold">+92-300-0000000</a></p>
                             </div>
                         </div>
 
-                        <div class="contact-info-item">
-                            <div class="info-icon">
-                                <i class="bi bi-clock"></i>
+                        <!-- Email -->
+                        <div class="contact-info-item mb-4 p-3 rounded-custom">
+                            <div class="info-icon bg-primary-gradient">
+                                <i class="bi bi-envelope-fill"></i>
                             </div>
-                            <div class="info-content">
-                                <h5 class="text-white mb-2">Business Hours</h5>
-                                <p class="text-white">Monday - Friday: 10:00 AM - 8:00 PM</p>
-                                <p class="text-white">Saturday - Sunday: 12:00 PM - 8:00 PM</p>
+                            <div class="info-content flex-grow-1">
+                                <h5 class="text-white mb-2">✉️ Email</h5>
+                                <p class="text-white mb-0"><a href="mailto:info@CarSphere.com" class="text-decoration-none text-warning fw-bold">info@CarSphere.com</a></p>
                             </div>
                         </div>
 
+                        <!-- Business Hours -->
+                        <div class="contact-info-item mb-4 p-3 rounded-custom">
+                            <div class="info-icon bg-primary-gradient">
+                                <i class="bi bi-clock-fill"></i>
+                            </div>
+                            <div class="info-content flex-grow-1">
+                                <h5 class="text-white mb-2">🕐 Business Hours</h5>
+                                <p class="text-white mb-1"><strong>Mon - Fri:</strong> 10:00 AM - 8:00 PM</p>
+                                <p class="text-white mb-0"><strong>Sat - Sun:</strong> 12:00 PM - 8:00 PM</p>
+                            </div>
+                        </div>
 
-                        <div class="social-links-container mt-5">
-                            <h5 class="text-white mb-3">Follow Us</h5>
+                        <!-- Social Links -->
+                        <div class="social-links-container mt-5 p-4 bg-gradient-custom rounded-custom">
+                            <h5 class="text-white mb-4">
+                                <i class="bi bi-share text-primary me-2"></i>Follow Us & Connect With Developer
+                            </h5>
                             <div class="social-links">
-                                <a href="#" class="text-warning" title="Facebook"><i class="bi bi-facebook"></i></a>
-                                <a href="#" class="text-warning" title="Twitter"><i class="bi bi-twitter"></i></a>
-                                <a href="#" class="text-warning" title="Instagram"><i class="bi bi-instagram"></i></a>
-                                <a href="#" class="text-warning" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://www.instagram.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Instagram - ahmershah29"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.facebook.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Facebook - ahmershah29"><i class="bi bi-facebook"></i></a>
+                                <a href="https://twitter.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Twitter - ahmershah29"><i class="bi bi-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/syedahmershah" target="_blank" class="text-warning social-link social-link-car" title="LinkedIn - syedahmershah"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/ahmershahdev" target="_blank" class="text-warning social-link social-link-car" title="GitHub - ahmershahdev"><i class="bi bi-github"></i></a>
                             </div>
+                            <small class="text-white mt-3 d-block">Developed by <strong>Syed Ahmer Shah</strong></small>
                         </div>
                     </div>
                 </div>
@@ -944,58 +964,67 @@
     <footer class="footer-section">
         <div class="container">
             <div class="row pb-5">
-
+               
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="footer-column">
-                        <h5 class="text-warning mb-3">CarSphere</h5>
-                        <p class="text-white small mb-4">Premium automotive solutions by CarSphere. Experience
-                            excellence in every vehicle.</p>
+                        <div class="footer-brand-container mb-3">
+                            <img src="assets/images/logo/CarSphere.avif" alt="CarSphere" class="footer-logo mb-2">
+                            <h5 class="text-warning mb-2">CarSphere</h5>
+                        </div>
+                        <p class="text-white small mb-4">Premium automotive solutions delivering excellence in every vehicle. Your trusted partner in the automotive journey.</p>
                         <div class="social-links">
-                            <a href="#" class="text-warning"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="text-warning"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="text-warning"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="text-warning"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.facebook.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://twitter.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/syedahmershah" target="_blank" class="text-warning social-link social-link-car" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/ahmershahdev" target="_blank" class="text-warning social-link social-link-car" title="GitHub"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="footer-column">
-                        <h6 class="text-warning mb-3">Quick Links</h6>
+                        <h6 class="text-warning mb-4 footer-section-title">Quick Navigation</h6>
                         <ul class="list-unstyled footer-links">
-                            <li><a href="#home" class="text-decoration-none text-white">Home</a></li>
-                            <li><a href="#catalog" class="text-decoration-none text-white">Catalog</a></li>
-                            <li><a href="#compare" class="text-decoration-none text-white">Compare</a></li>
-                            <li><a href="#financing" class="text-decoration-none text-white">Financing</a></li>
-                            <li><a href="#dealers" class="text-decoration-none text-white">Showrooms</a></li>
+                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#home" class="text-decoration-none text-white">Home</a></li>
+                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#catalog" class="text-decoration-none text-white">Catalog</a></li>
+                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#compare" class="text-decoration-none text-white">Compare</a></li>
+                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#financing" class="text-decoration-none text-white">Financing</a></li>
+                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#dealers" class="text-decoration-none text-white">Showrooms</a></li>
+                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#contact" class="text-decoration-none text-white">Contact</a></li>
                         </ul>
                     </div>
                 </div>
 
-
+                <!-- Services Section -->
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="footer-column">
-                        <h6 class="text-warning mb-3">Services</h6>
+                        <h6 class="text-warning mb-4 footer-section-title">Our Services</h6>
                         <ul class="list-unstyled footer-links">
-                            <li><a href="#" class="text-decoration-none text-white">Car Financing</a></li>
-                            <li><a href="#" class="text-decoration-none text-white">Test Drive</a></li>
-                            <li><a href="#" class="text-decoration-none text-white">Trade-In</a></li>
-                            <li><a href="#" class="text-decoration-none text-white">Warranty</a></li>
-                            <li><a href="#" class="text-decoration-none text-white">Support</a></li>
+                            <li><i class="bi bi-car-front text-primary me-2"></i><a href="#financing" class="text-decoration-none text-white">Car Financing</a></li>
+                            <li><i class="bi bi-speedometer text-primary me-2"></i><a href="#" class="text-decoration-none text-white">Test Drive</a></li>
+                            <li><i class="bi bi-coin text-primary me-2"></i><a href="#" class="text-decoration-none text-white">Trade-In</a></li>
+                            <li><i class="bi bi-shield-check text-primary me-2"></i><a href="#financing" class="text-decoration-none text-white">Warranty</a></li>
+                            <li><i class="bi bi-telephone text-primary me-2"></i><a href="#contact" class="text-decoration-none text-white">Support</a></li>
                         </ul>
                     </div>
                 </div>
 
-
+                <!-- Contact & Newsletter Section -->
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="footer-column">
-                        <h6 class="text-warning mb-3">Newsletter</h6>
-                        <p class="text-white small mb-3">Subscribe to get the latest updates and exclusive offers.</p>
+                        <h6 class="text-warning mb-4 footer-section-title">Get in Touch</h6>
+                        <div class="footer-contact-info mb-4">
+                            <p class="text-white small mb-2"><i class="bi bi-telephone text-primary me-2"></i><a href="tel:+923000000000" class="text-white text-decoration-none">+92-300-0000000</a></p>
+                            <p class="text-white small mb-2"><i class="bi bi-envelope text-primary me-2"></i><a href="mailto:info@CarSphere.com" class="text-white text-decoration-none">info@CarSphere.com</a></p>
+                            <p class="text-white small"><i class="bi bi-geo-alt text-primary me-2"></i>Karachi, Pakistan</p>
+                        </div>
+                        <h6 class="text-warning mb-3 footer-section-title-small">Newsletter</h6>
+                        <p class="text-white small mb-3">Subscribe for exclusive offers & updates.</p>
                         <form class="newsletter-form">
                             <div class="input-group">
-                                <input type="email" class="form-control newsletter-input" placeholder="Your email"
-                                    required>
-                                <button class="btn btn-primary btn-sm" type="submit"><i class="bi bi-send"></i></button>
+                                <input type="email" class="form-control newsletter-input" placeholder="Your email" required>
+                                <button class="btn btn-primary btn-sm" type="submit" title="Subscribe"><i class="bi bi-send"></i></button>
                             </div>
                         </form>
                     </div>
@@ -1003,17 +1032,17 @@
             </div>
         </div>
 
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p class="text-center text-md-start text-white mb-0 small">&copy; 2026 CarSphere by CarSphere.
-                            All rights reserved.</p>
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="text-white mb-0 small">&copy; 2026 CarSphere by Syed Ahmer Shah. All rights reserved. | Developed with <i class="bi bi-heart-fill text-danger"></i> in Hyderabad</p>
                     </div>
                     <div class="col-md-6">
                         <div class="footer-links-bottom text-center text-md-end">
-                            <a href="#" class="text-white text-decoration-none small">Privacy Policy</a> |
-                            <a href="#" class="text-white text-decoration-none small">Terms of Service</a> |
+                            <a href="#" class="text-white text-decoration-none small me-3">Privacy Policy</a>
+                            <a href="#" class="text-white text-decoration-none small me-3">Terms of Service</a>
                             <a href="#" class="text-white text-decoration-none small">Cookie Policy</a>
                         </div>
                     </div>

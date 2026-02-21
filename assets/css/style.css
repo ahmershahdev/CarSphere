@@ -476,8 +476,9 @@ section::before {
 }
 
 .form-select:focus {
-    background: rgba(255, 255, 255, 0.1) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffd700' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") no-repeat right 12px center;
-    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.05) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ff4500' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") no-repeat right 12px center;
+   
+     border-color: var(--primary-color);
     box-shadow: 0 0 20px rgba(255, 69, 0, 0.2);
     color: var(--text-primary);
 }
@@ -1484,6 +1485,7 @@ ol li {
     color: var(--text-primary);
     transition: all var(--hover-duration) var(--transition-ease);
     border-radius: 8px;
+    width: 100%;
 }
 
 .contact-input:focus {
@@ -1501,6 +1503,7 @@ ol li {
     font-weight: 600;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .btn-submit-contact:hover {
@@ -1924,6 +1927,396 @@ ol li {
 
     .brand-action-buttons-large button {
         width: 100% !important;
+    }
+
+    /* Collection Section Mobile Fixes */
+    .brand-row {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .brand-carousel-container {
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand-title-large {
+        font-size: 1.3rem !important;
+        margin-bottom: 10px;
+    }
+
+    .brand-description {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .brand-stats {
+        gap: 12px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    .specs-list p {
+        margin: 6px 0;
+        font-size: 0.95rem;
+        padding-left: 8px;
+    }
+
+    /* Contact Section Mobile Fixes */
+    .contact-form-container,
+    .contact-info-container {
+        padding: 20px 15px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+
+    .contact-form-header {
+        font-size: 1.4rem;
+    }
+
+    .contact-form-header i {
+        font-size: 1.6rem;
+    }
+
+    .contact-input {
+        font-size: 0.95rem;
+    }
+
+    .contact-info-item {
+        gap: 12px;
+        padding: 15px;
+        margin-bottom: 12px;
+    }
+
+    .contact-info-item h5 {
+        font-size: 0.95rem;
+        margin-bottom: 5px;
+    }
+
+    .contact-info-item p {
+        font-size: 0.85rem;
+    }
+
+    /* Footer Mobile Fixes */
+    .footer-section {
+        padding: 40px 0 0 0;
+    }
+
+    .footer-column {
+        margin-bottom: 25px;
+    }
+
+    .footer-column h5,
+    .footer-column h6 {
+        margin-bottom: 15px;
+        font-size: 1rem;
+    }
+
+    .footer-section-title {
+        padding-bottom: 12px;
+    }
+
+    .footer-section-title::after {
+        width: 25px;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+
+    .footer-contact-info p {
+        font-size: 0.9rem;
+        margin-bottom: 8px !important;
+    }
+
+    .newsletter-input {
+        min-width: auto;
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+
+    .newsletter-form .btn {
+        padding: 10px 15px;
+    }
+
+    .footer-bottom {
+        padding: 20px 0;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+
+    .footer-links-bottom a {
+        font-size: 0.85rem;
+        margin-right: 10px !important;
+    }
+}
+
+/* Tablet/Medium Screens Mobile Optimizations */
+@media (max-width: 768px) and (min-width: 577px) {
+    .brand-row {
+        gap: 20px;
+    }
+
+    .brand-title-large {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .brand-description {
+        font-size: 1rem;
+    }
+
+    .contact-form-container,
+    .contact-info-container {
+        padding: 25px 20px;
+    }
+
+    .footer-section {
+        padding: 60px 0 0 0;
+    }
+
+    .footer-column h5,
+    .footer-column h6 {
+        font-size: 1.05rem;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .brand-title-large {
+        font-size: 1.1rem;
+    }
+
+    .brand-description {
+        font-size: 0.9rem;
+    }
+
+    .brand-stats {
+        gap: 10px;
+    }
+
+    .stat-number {
+        font-size: 1.3rem;
+    }
+
+    .contact-form-container,
+    .contact-info-container {
+        padding: 15px 12px;
+    }
+
+    .contact-form-header {
+        font-size: 1.2rem;
+    }
+
+    .contact-input {
+        font-size: 0.9rem;
+    }
+
+    .footer-column h6 {
+        font-size: 0.95rem;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+
+    .footer-contact-info p {
+        font-size: 0.85rem;
+    }
+
+    /* General section title responsiveness */
+    .section-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    .lead {
+        font-size: clamp(0.95rem, 3vw, 1.25rem);
+    }
+
+    .row.align-items-center > div {
+        margin-bottom: 20px;
+    }
+
+    .row.align-items-center > div:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Mobile optimizations for form layout */
+@media (max-width: 768px) {
+    .contact-form h3 {
+        font-size: 1.3rem;
+    }
+
+    .contact-info-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .form-label {
+        font-size: 0.95rem;
+    }
+
+    .row.align-items-center {
+        align-items: stretch !important;
+    }
+
+    /* Footer tablet optimizations */
+    .footer-section .row {
+        row-gap: 30px;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer-column p {
+        line-height: 1.5;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .footer-bottom .col-md-6 {
+        text-align: center !important;
+    }
+
+    .footer-links-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-links-bottom a {
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-section .row {
+        row-gap: 25px;
+    }
+
+    .footer-column {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-brand-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-links {
+        list-style: none;
+        text-align: center;
+    }
+
+    .footer-links li {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-column p {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    .footer-bottom .row {
+        row-gap: 15px;
+    }
+
+    .footer-bottom .col-md-6 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom .col-md-6:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-links-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-links-bottom a {
+        display: inline-block;
+        margin-right: 0 !important;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+
+    .footer-contact-info p {
+        margin-bottom: 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section {
+        padding: 35px 0 0 0;
+    }
+
+    .footer-column h6 {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .footer-column p {
+        font-size: 0.85rem;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+
+    .footer-contact-info p {
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        padding: 15px 0;
+    }
+
+    .footer-bottom p {
+        font-size: 0.75rem;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-link {
+        font-size: 1.2rem;
+    }
+
+    .newsletter-input {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+
+    .newsletter-form .btn {
+        padding: 8px 12px;
     }
 }
 

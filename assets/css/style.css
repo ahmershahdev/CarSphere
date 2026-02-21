@@ -49,6 +49,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 100vw;
 }
 
 body::before {
@@ -101,6 +102,7 @@ body::before {
     border-bottom: 2px solid rgba(255, 69, 0, 0.2);
     transition: all var(--hover-duration) var(--transition-ease);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    z-index: 1030;
 }
 
 #mainNav.scrolled {
@@ -174,7 +176,7 @@ body::before {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 120px 20px 60px;
+    padding: clamp(70px, 10vw, 100px) clamp(12px, 5vw, 20px) clamp(25px, 5vw, 60px);
 }
 
 .hero-background {
@@ -216,7 +218,7 @@ body::before {
 
 .hero-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: 3.5rem;
+    font-size: clamp(1.75rem, 5vw, 3.5rem);
     font-weight: 900;
     margin-bottom: 20px;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -228,7 +230,7 @@ body::before {
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: clamp(0.875rem, 2vw, 1.3rem);
     color: var(--text-secondary);
     margin-bottom: 30px;
     line-height: 1.6;
@@ -270,13 +272,13 @@ body::before {
 
 .section-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 900;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 40px;
+    margin-bottom: clamp(25px, 5vw, 40px);
     position: relative;
     padding-bottom: 20px;
 }
@@ -294,7 +296,7 @@ body::before {
 }
 
 section {
-    padding: 80px 0;
+    padding: clamp(40px, 10vw, 60px) clamp(12px, 5vw, 0px);
     position: relative;
 }
 
@@ -314,6 +316,7 @@ section::before {
     backdrop-filter: blur(10px);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
+    overflow-x: hidden;
 }
 
 .search-input,
@@ -323,6 +326,8 @@ section::before {
     color: var(--text-primary);
     transition: all var(--hover-duration) var(--transition-ease);
     font-weight: 500;
+    width: 100%;
+    max-width: 100%;
 }
 
 .search-input:focus,
@@ -352,6 +357,7 @@ section::before {
     border-radius: 0 0 8px 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
+    max-width: calc(100vw - 30px);
 }
 
 .suggestions-dropdown.show {
@@ -690,6 +696,27 @@ ol li {
     background: linear-gradient(180deg, var(--dark-bg) 0%, var(--secondary-color) 100%);
 }
 
+.brand-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.brand-row > div {
+    flex: 1 1 100%;
+}
+
+@media (min-width: 992px) {
+    .brand-row > div {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .ps-lg-4 {
+        padding-left: 2rem !important;
+    }
+}
+
 .brand-carousel-container {
     border-radius: 15px;
     overflow: hidden;
@@ -704,7 +731,7 @@ ol li {
 
 .brand-carousel-item img {
     width: 100%;
-    height: 350px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
     transition: transform 0.6s ease;
@@ -767,7 +794,7 @@ ol li {
 }
 
 .brand-details-container {
-    padding: 40px;
+    padding: clamp(15px, 4vw, 40px);
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(13, 13, 13, 0.8) 100%);
     border: 1px solid rgba(255, 69, 0, 0.2);
     border-radius: 15px;
@@ -792,7 +819,7 @@ ol li {
 
 .brand-title-large {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 900;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
@@ -802,7 +829,7 @@ ol li {
 }
 
 .brand-description {
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 25px;
@@ -810,10 +837,11 @@ ol li {
 
 .brand-stats {
     display: flex;
-    gap: 30px;
+    gap: clamp(15px, 5vw, 30px);
     margin-bottom: 25px;
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(255, 69, 0, 0.2);
+    flex-wrap: wrap;
 }
 
 .stat-item {
@@ -880,6 +908,7 @@ ol li {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--dark-bg) 100%);
     border: 1px solid rgba(255, 69, 0, 0.2);
     border-radius: 15px;
+    max-width: 100vw;
 }
 
 .modal-header {
@@ -888,12 +917,19 @@ ol li {
 }
 
 .modal-body {
-    padding: 30px;
+    padding: 20px;
+}
+
+@media (min-width: 576px) {
+    .modal-body {
+        padding: 30px;
+    }
 }
 
 
 .comparison-section {
     background: linear-gradient(135deg, var(--dark-bg) 0%, var(--secondary-color) 100%);
+    overflow-x: hidden;
 }
 
 .comparison-table {
@@ -901,20 +937,37 @@ ol li {
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    display: block;
+    overflow-x: auto;
 }
 
 .comparison-table th {
     background: linear-gradient(135deg, rgba(255, 69, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
     border-bottom: 2px solid var(--primary-color);
-    padding: 15px;
+    padding: 12px;
     font-weight: 700;
     color: var(--accent-color);
+    font-size: 0.9rem;
 }
 
 .comparison-table td {
-    padding: 15px;
+    padding: 12px;
     border-bottom: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .comparison-table th,
+    .comparison-table td {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+
+    .comparison-table {
+        font-size: 0.85rem;
+    }
 }
 
 .comparison-table tr:hover td {
@@ -949,7 +1002,7 @@ ol li {
 .compare-card-image-wrapper {
     position: relative;
     width: 100%;
-    height: 250px;
+    aspect-ratio: 3 / 2;
     overflow: hidden;
     background: linear-gradient(135deg, rgba(255, 69, 0, 0.05) 0%, rgba(255, 215, 0, 0.02) 100%);
 }
@@ -1081,6 +1134,7 @@ ol li {
     color: var(--primary-color);
     font-weight: 600;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .select-car-btn:hover {
@@ -1108,7 +1162,7 @@ ol li {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(13, 13, 13, 0.8) 100%);
     border: 1px solid rgba(255, 69, 0, 0.2);
     border-radius: 15px;
-    padding: 30px;
+    padding: clamp(15px, 4vw, 30px);
     position: relative;
     transition: all 0.3s ease;
     height: 100%;
@@ -1202,7 +1256,7 @@ ol li {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(13, 13, 13, 0.8) 100%);
     border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 12px;
-    padding: 25px;
+    padding: clamp(15px, 4vw, 25px);
     position: relative;
     transition: all 0.3s ease;
     height: 100%;
@@ -1271,15 +1325,17 @@ ol li {
 .financing-carousel-wrapper {
     overflow: hidden;
     width: 100%;
+    max-width: 100vw;
 }
 
 .financing-carousel {
     display: flex;
-    gap: 40px;
-    padding: 30px 20px;
+    gap: 20px;
+    padding: 20px 10px;
     scroll-behavior: smooth;
     align-items: center;
     animation: infiniteScroll 60s linear infinite;
+    overflow-x: auto;
 }
 
 @keyframes infiniteScroll {
@@ -1296,16 +1352,16 @@ ol li {
 }
 
 .financing-carousel::-webkit-scrollbar {
-    height: 8px;
+    height: 6px;
 }
 
 .financing-carousel-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 140px;
-    width: 140px;
-    height: 140px;
+    min-width: 120px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background: white;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -1313,6 +1369,19 @@ ol li {
     cursor: pointer;
     flex-shrink: 0;
     overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .financing-carousel-item {
+        min-width: 140px;
+        width: 140px;
+        height: 140px;
+    }
+
+    .financing-carousel {
+        gap: 40px;
+        padding: 30px 20px;
+    }
 }
 
 .financing-carousel-item img {
@@ -1397,7 +1466,7 @@ ol li {
 
 .contact-form-container {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(13, 13, 13, 0.8) 100%);
-    padding: 40px;
+    padding: clamp(15px, 4vw, 40px);
     border-radius: 15px;
     border: 1px solid rgba(255, 69, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -1441,7 +1510,7 @@ ol li {
 
 .contact-info-container {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(13, 13, 13, 0.8) 100%);
-    padding: 40px;
+    padding: clamp(15px, 4vw, 40px);
     border-radius: 15px;
     border: 1px solid rgba(255, 69, 0, 0.2);
     transition: all 0.3s ease;
@@ -1454,8 +1523,8 @@ ol li {
 
 .contact-info-item {
     display: flex;
-    gap: 20px;
-    padding: 15px;
+    gap: clamp(15px, 3vw, 20px);
+    padding: clamp(10px, 3vw, 15px);
     border-radius: 10px;
     transition: all 0.3s ease;
     background: rgba(255, 69, 0, 0);
@@ -1544,13 +1613,13 @@ ol li {
 }
 
 .social-link {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: clamp(40px, 8vw, 50px);
+    height: clamp(40px, 8vw, 50px);
     border-radius: 10px;
     background: rgba(255, 69, 0, 0.1);
     cursor: pointer !important;
@@ -1592,8 +1661,15 @@ ol li {
     border-top: 2px solid rgba(255, 69, 0, 0.2);
     position: relative;
     overflow: hidden;
-    padding: 80px 0 0 0;
+    padding: 60px 0 0 0;
     margin-top: auto;
+    overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+    .footer-section {
+        padding: 80px 0 0 0;
+    }
 }
 
 .footer-section::before {
@@ -1705,6 +1781,7 @@ ol li {
 .newsletter-form {
     display: flex;
     gap: 5px;
+    flex-wrap: wrap;
 }
 
 .newsletter-input {
@@ -1712,6 +1789,7 @@ ol li {
     border: 1px solid rgba(255, 69, 0, 0.3);
     color: var(--text-primary);
     flex: 1;
+    min-width: 200px;
     border-radius: 5px 0 0 5px;
     transition: all 0.3s ease;
     padding: 10px 15px;
@@ -1738,6 +1816,22 @@ ol li {
 .newsletter-form .btn:hover {
     background: linear-gradient(135deg, var(--primary-color), #ff6535);
     transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+    .newsletter-form {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .newsletter-input {
+        min-width: 100%;
+        border-radius: 5px;
+    }
+
+    .newsletter-form .btn {
+        border-radius: 5px;
+    }
 }
 
 .footer-bottom {
@@ -1785,82 +1879,14 @@ ol li {
 
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .brand-title-large {
-        font-size: 2rem;
-    }
-
-    .brand-carousel-item img {
-        height: 280px;
-    }
-
-    .brand-details-container {
-        padding: 25px;
-    }
-
-    .social-link {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
-    }
-
-    .footer-social-links {
-        gap: 10px;
-    }
-
     .warranty-card.premium {
         transform: scale(1);
-    }
-
-    .nav-link {
-        margin: 0.25rem 0;
-    }
-
-    section {
-        padding: 60px 0;
-    }
-
-    .contact-form-container,
-    .contact-info-container {
-        padding: 30px;
-    }
-
-    .footer-column {
-        margin-bottom: 30px;
     }
 }
 
 @media (max-width: 576px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 0.9rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .brand-carousel-item img {
-        height: 220px;
-    }
-
     .brand-stats {
         flex-direction: column;
-        gap: 15px;
     }
 
     .contact-info-item {
@@ -1869,19 +1895,8 @@ ol li {
         text-align: center;
     }
 
-    .social-link {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-
-    .footer-social-links {
-        justify-content: center;
-    }
-
     .warranty-card,
     .warranty-card.premium {
-        padding: 20px;
         transform: scale(1) !important;
     }
 
@@ -1889,17 +1904,9 @@ ol li {
         margin-bottom: 15px;
     }
 
-    .financing-option {
-        padding: 20px;
-    }
-
-    .contact-form-container,
-    .contact-info-container {
-        padding: 20px;
-    }
-
     .newsletter-form {
         flex-direction: column;
+        gap: 8px;
     }
 
     .newsletter-input {
@@ -1908,7 +1915,15 @@ ol li {
 
     .newsletter-form .btn {
         border-radius: 5px;
-        margin-top: 8px;
+    }
+
+    .brand-action-buttons-large {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .brand-action-buttons-large button {
+        width: 100% !important;
     }
 }
 

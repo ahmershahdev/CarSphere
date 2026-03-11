@@ -2,1169 +2,324 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CarSphere - Premium Car Dealership by CarSphere</title>
-    <meta name="title" content="CarSphere – Premium Car Dealership by CarSphere" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Discover premium vehicles, explore financing options, and find your perfect car at CarSphere by CarSphere. Premium brands, flexible financing, expert support." />
+        content="Novio - Premium online tech courses. Learn web development, data science, AI, cybersecurity and more from industry experts.">
     <meta name="keywords"
-        content="cars, automotive, dealership, luxury cars, financing, car loans, new cars, used cars, vehicle dealer" />
-    <meta name="author" content="Syed Ahmer Shah" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#ff4500" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="CarSphere – Premium Car Dealership by CarSphere" />
+        content="online courses, tech courses, web development, data science, machine learning, programming, coding bootcamp">
+    <meta name="author" content="Novio">
+    <meta property="og:title" content="Novio - Learn Tech Skills Online">
     <meta property="og:description"
-        content="Discover premium vehicles at CarSphere by CarSphere. Explore financing, compare cars, and find your perfect match." />
-    <meta property="og:site_name" content="CarSphere" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="CarSphere – Premium Car Dealership by CarSphere" />
-    <meta name="twitter:description"
-        content="Explore premium vehicles, financing options, and find your perfect car at CarSphere." />
-
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg" />
-    <meta name="theme-color" content="#ff4500" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;600;700;900&display=swap"
-        rel="stylesheet" />
-
-    <link rel="stylesheet" href="assets/css/style.css" />
-
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "LocalBusiness",
-    "name": "CarSphere by CarSphere",
-    "description": "Premium car dealership offering luxury vehicles, financing, and expert automotive services.",
-    "url": "https://ahmershahdev.github.io/CarSphere/",
-    "telephone": "+92-326-3186750",
-    "email": "syedahmershahofficial@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Showroom Lane",
-      "addressLocality": "Hyderabad",
-      "addressCountry": "PK"
-    },
-    "areaServed": "Pakistan"
-  }
-  </script>
+        content="Premium online courses to advance your tech career. Learn from industry experts.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://novio.com/">
+    <title>Novio - Learn Tech Skills Online</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body data-bs-spy="scrollspy" data-bs-target="#mainNav" data-bs-offset="100">
+<body>
 
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#home">
-                <img src="assets/images/logo/CarSphere.avif" alt="CarSphere Logo" class="navbar-logo">
-                <span class="brand-text">CarSphere</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Novio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#catalog">Catalog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#compare">Compare</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#financing">Financing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#dealers">Showrooms</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Novio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="cart.html" class="btn btn-icon position-relative" aria-label="Cart">
+                            <i class="bi bi-cart3"></i>
+                            <span class="cart-badge badge" data-count="0">0</span>
+                        </a>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm" id="loginBtn">Log In</a>
+                        <a href="signup.html" class="btn btn-primary btn-sm" id="signupBtn">Sign Up</a>
+                        <a href="account.html" class="btn btn-icon d-none" id="accountBtn" aria-label="Account">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Experience Premium Automotive Excellence</h1>
-            <p class="hero-subtitle">Discover our curated collection of luxury vehicles with flexible financing options
-            </p>
-            <a href="#catalog" class="btn btn-primary btn-lg glow-btn mt-4">Explore Now</a>
-        </div>
-        <div class="hero-background"></div>
-    </section>
-
-
-    <section id="search" class="search-section">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <h2 class="section-title text-center mb-4 mb-md-5">Find Your Perfect Car</h2>
-            <div class="row g-2 g-md-3">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <input type="text" class="form-control search-input" id="searchInput"
-                        placeholder="Search by brand or model...">
-                    <div class="suggestions-dropdown" id="suggestionsDropdown"></div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <select class="form-select filter-input" id="brandFilter">
-                        <option value="">All Brands</option>
-                    </select>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <select class="form-select filter-input" id="priceFilter">
-                        <option value="">All Prices</option>
-                        <option value="0-5000000">0 - 5M PKR</option>
-                        <option value="5000000-10000000">5M - 10M PKR</option>
-                        <option value="10000000-20000000">10M - 20M PKR</option>
-                        <option value="20000000-50000000">20M - 50M PKR</option>
-                        <option value="50000000-999999999">50M+ PKR</option>
-                    </select>
-                </div>
-                <div class="col-12 col-md-6 col-lg-2">
-                    <button class="btn btn-primary w-100" id="filterBtn">Filter</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="catalog" class="catalog-section">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Our Collection</h2>
-            <div class="row" id="brandsContainer">
-
-                <div class="row brand-row mb-5 align-items-center">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="brand-carousel-container">
-                            <div id="carousel-bmw" class="carousel carousel-fade slide brand-carousel-item" data-bs-ride="carousel"
-                                data-bs-interval="5000">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="assets/images/cars/bmw/bmw-logo.avif" alt="BMW Logo"
-                                            onerror="this.src='assets/images/logo/CarSphere.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/bmw/bmw-1.avif" alt="BMW 3 Series 1"
-                                            onerror="this.src='assets/images/cars/bmw/bmw-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/bmw/bmw-2.avif" alt="BMW 3 Series 2"
-                                            onerror="this.src='assets/images/cars/bmw/bmw-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/bmw/bmw-3.avif" alt="BMW 3 Series 3"
-                                            onerror="this.src='assets/images/cars/bmw/bmw-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/bmw/bmw-4.avif" alt="BMW 3 Series 4"
-                                            onerror="this.src='assets/images/cars/bmw/bmw-1.avif'">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-bmw"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-bmw"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 ps-lg-4">
-                        <div class="brand-details-container">
-                            <h3 class="brand-title-large">BMW 3 Series</h3>
-                            <p class="brand-description">Luxury performance sedan with cutting-edge technology and
-                                ultimate driving experience.</p>
-                            <div class="brand-stats">
-                                <div class="stat-item">
-                                    <div class="stat-number">2024</div>
-                                    <div class="stat-label">Model Year</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">PKR 120L</div>
-                                    <div class="stat-label">Price</div>
-                                </div>
-                            </div>
-                            <div class="specs-list mb-3">
-                                <p class="text-white"><strong>Engine:</strong> 2.0L Turbo Automatic</p>
-                                <p class="text-white"><strong>Transmission:</strong> 8-Speed Automatic</p>
-                                <p class="text-white"><strong>Dealer:</strong> CarSphere Hyderabad</p>
-                                <p class="text-white"><strong>Warranty:</strong> 5 Years / 100,000 KM</p>
-                            </div>
-                            <div class="brand-action-buttons-large d-flex gap-2">
-                                <button class="btn btn-primary btn-lg flex-grow-1" data-bs-toggle="modal"
-                                    data-bs-target="#carModal">View Details</button>
-                                <button class="btn btn-outline-primary btn-lg flex-grow-1">View Live</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row brand-row mb-5 align-items-center">
-                    <div class="col-lg-6 ps-lg-4">
-                        <div class="brand-details-container">
-                            <h3 class="brand-title-large">Audi Q7</h3>
-                            <p class="brand-description">Luxury SUV combining elegance, performance, and premium comfort
-                                features.</p>
-                            <div class="brand-stats">
-                                <div class="stat-item">
-                                    <div class="stat-number">2024</div>
-                                    <div class="stat-label">Model Year</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">PKR 220L</div>
-                                    <div class="stat-label">Price</div>
-                                </div>
-                            </div>
-                            <div class="specs-list mb-3">
-                                <p class="text-white"><strong>Engine:</strong> 3.0L Turbo Automatic</p>
-                                <p class="text-white"><strong>Transmission:</strong> 8-Speed Automatic AWD</p>
-                                <p class="text-white"><strong>Dealer:</strong> CarSphere Hyderabad</p>
-                                <p class="text-white"><strong>Warranty:</strong> 5 Years / 100,000 KM</p>
-                            </div>
-                            <div class="brand-action-buttons-large d-flex gap-2">
-                                <button class="btn btn-primary btn-lg flex-grow-1" data-bs-toggle="modal"
-                                    data-bs-target="#carModal">View Details</button>
-                                <button class="btn btn-outline-primary btn-lg flex-grow-1">View Live</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="brand-carousel-container">
-                            <div id="carousel-audi" class="carousel carousel-fade slide brand-carousel-item" data-bs-ride="carousel"
-                                data-bs-interval="5000">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="assets/images/cars/audi/audi-logo.avif" alt="Audi Logo"
-                                            onerror="this.src='assets/images/logo/CarSphere.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/audi/audi-1.avif" alt="Audi Q7 1"
-                                            onerror="this.src='assets/images/cars/audi/audi-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/audi/audi-2.avif" alt="Audi Q7 2"
-                                            onerror="this.src='assets/images/cars/audi/audi-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/audi/audi-3.avif" alt="Audi Q7 3"
-                                            onerror="this.src='assets/images/cars/audi/audi-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/audi/audi-4.avif" alt="Audi Q7 4"
-                                            onerror="this.src='assets/images/cars/audi/audi-1.avif'">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-audi"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-audi"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row brand-row mb-5 align-items-center">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="brand-carousel-container">
-                            <div id="carousel-porsche" class="carousel carousel-fade slide brand-carousel-item"
-                                data-bs-ride="carousel" data-bs-interval="5000">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="assets/images/cars/porsche/porsche-logo.avif" alt="Porsche Logo"
-                                            onerror="this.src='assets/images/logo/CarSphere.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/porsche/porsche-1.avif" alt="Porsche 911 1"
-                                            onerror="this.src='assets/images/cars/porsche/porsche-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/porsche/porsche-2.avif" alt="Porsche 911 2"
-                                            onerror="this.src='assets/images/cars/porsche/porsche-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/porsche/porsche-3.avif" alt="Porsche 911 3"
-                                            onerror="this.src='assets/images/cars/porsche/porsche-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/porsche/porsche-4.avif" alt="Porsche 911 4"
-                                            onerror="this.src='assets/images/cars/porsche/porsche-1.avif'">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-porsche"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-porsche"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 ps-lg-4">
-                        <div class="brand-details-container">
-                            <h3 class="brand-title-large">Porsche 911</h3>
-                            <p class="brand-description">Legendary sports car delivering supreme performance and iconic
-                                design.</p>
-                            <div class="brand-stats">
-                                <div class="stat-item">
-                                    <div class="stat-number">2024</div>
-                                    <div class="stat-label">Model Year</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">PKR 750L</div>
-                                    <div class="stat-label">Price</div>
-                                </div>
-                            </div>
-                            <div class="specs-list mb-3">
-                                <p class="text-white"><strong>Engine:</strong> 3.8L Turbo Automatic</p>
-                                <p class="text-white"><strong>Transmission:</strong> 8-Speed Automatic RWD</p>
-                                <p class="text-white"><strong>Dealer:</strong> CarSphere Islamabad</p>
-                                <p class="text-white"><strong>Warranty:</strong> 5 Years / 100,000 KM</p>
-                            </div>
-                            <div class="brand-action-buttons-large d-flex gap-2">
-                                <button class="btn btn-primary btn-lg flex-grow-1" data-bs-toggle="modal"
-                                    data-bs-target="#carModal">View Details</button>
-                                <button class="btn btn-outline-primary btn-lg flex-grow-1">View Live</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row brand-row mb-5 align-items-center">
-                    <div class="col-lg-6 ps-lg-4">
-                        <div class="brand-details-container">
-                            <h3 class="brand-title-large">Lamborghini Urus</h3>
-                            <p class="brand-description">Ultra-luxury super SUV with extraordinary performance and
-                                exclusive design.</p>
-                            <div class="brand-stats">
-                                <div class="stat-item">
-                                    <div class="stat-number">2024</div>
-                                    <div class="stat-label">Model Year</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">PKR 800L</div>
-                                    <div class="stat-label">Price</div>
-                                </div>
-                            </div>
-                            <div class="specs-list mb-3">
-                                <p class="text-white"><strong>Engine:</strong> 4.0L Twin-Turbo Automatic</p>
-                                <p class="text-white"><strong>Transmission:</strong> 8-Speed Automatic AWD</p>
-                                <p class="text-white"><strong>Dealer:</strong> CarSphere Hyderabad</p>
-                                <p class="text-white"><strong>Warranty:</strong> 5 Years / 100,000 KM</p>
-                            </div>
-                            <div class="brand-action-buttons-large d-flex gap-2">
-                                <button class="btn btn-primary btn-lg flex-grow-1" data-bs-toggle="modal"
-                                    data-bs-target="#carModal">View Details</button>
-                                <button class="btn btn-outline-primary btn-lg flex-grow-1">View Live</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="brand-carousel-container">
-                            <div id="carousel-lamborghini" class="carousel carousel-fade slide brand-carousel-item"
-                                data-bs-ride="carousel" data-bs-interval="5000">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="assets/images/cars/lamborghini/lamborghini-logo.avif"
-                                            alt="Lamborghini Logo"
-                                            onerror="this.src='assets/images/logo/CarSphere.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/lamborghini/lamborghini-1.avif"
-                                            alt="Lamborghini Urus 1"
-                                            onerror="this.src='assets/images/cars/lamborghini/lamborghini-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/lamborghini/lamborghini-2.avif"
-                                            alt="Lamborghini Urus 2"
-                                            onerror="this.src='assets/images/cars/lamborghini/lamborghini-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/lamborghini/lamborghini-3.avif"
-                                            alt="Lamborghini Urus 3"
-                                            onerror="this.src='assets/images/cars/lamborghini/lamborghini-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/lamborghini/lamborghini-4.avif"
-                                            alt="Lamborghini Urus 4"
-                                            onerror="this.src='assets/images/cars/lamborghini/lamborghini-1.avif'">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carousel-lamborghini" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carousel-lamborghini" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row brand-row mb-5 align-items-center">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="brand-carousel-container">
-                            <div id="carousel-toyota" class="carousel carousel-fade slide brand-carousel-item" data-bs-ride="carousel"
-                                data-bs-interval="5000">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="assets/images/cars/toyota/toyota-logo.avif" alt="Toyota Logo"
-                                            onerror="this.src='assets/images/logo/CarSphere.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/toyota/toyota-1.avif" alt="Toyota Corolla 1"
-                                            onerror="this.src='assets/images/cars/toyota/toyota-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/toyota/toyota-2.avif" alt="Toyota Corolla 2"
-                                            onerror="this.src='assets/images/cars/toyota/toyota-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/toyota/toyota-3.avif" alt="Toyota Corolla 3"
-                                            onerror="this.src='assets/images/cars/toyota/toyota-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/toyota/toyota-4.avif" alt="Toyota Corolla 4"
-                                            onerror="this.src='assets/images/cars/toyota/toyota-1.avif'">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-toyota"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-toyota"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 ps-lg-4">
-                        <div class="brand-details-container">
-                            <h3 class="brand-title-large">Toyota Corolla</h3>
-                            <p class="brand-description">The world's best-selling sedan, combining reliability,
-                                efficiency, and advanced technology.</p>
-                            <div class="brand-stats">
-                                <div class="stat-item">
-                                    <div class="stat-number">2024</div>
-                                    <div class="stat-label">Model Year</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">PKR 42L</div>
-                                    <div class="stat-label">Price</div>
-                                </div>
-                            </div>
-                            <div class="specs-list mb-3">
-                                <p class="text-white"><strong>Engine:</strong> 1.6L Automatic</p>
-                                <p class="text-white"><strong>Transmission:</strong> Automatic</p>
-                                <p class="text-white"><strong>Dealer:</strong> CarSphere Hyderabad</p>
-                                <p class="text-white"><strong>Warranty:</strong> 3 Years / 100,000 KM</p>
-                            </div>
-                            <div class="brand-action-buttons-large d-flex gap-2">
-                                <button class="btn btn-primary btn-lg flex-grow-1" data-bs-toggle="modal"
-                                    data-bs-target="#carModal">View Details</button>
-                                <button class="btn btn-outline-primary btn-lg flex-grow-1">View Live</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row brand-row mb-5 align-items-center">
-                    <div class="col-lg-6 ps-lg-4">
-                        <div class="brand-details-container">
-                            <h3 class="brand-title-large">Honda Civic</h3>
-                            <p class="brand-description">Experience modern engineering and premium comfort with the
-                                Honda Civic, a perfect blend of performance and style.</p>
-                            <div class="brand-stats">
-                                <div class="stat-item">
-                                    <div class="stat-number">2024</div>
-                                    <div class="stat-label">Model Year</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">PKR 35L</div>
-                                    <div class="stat-label">Price</div>
-                                </div>
-                            </div>
-                            <div class="specs-list mb-3">
-                                <p class="text-white"><strong>Engine:</strong> 1.8L Automatic</p>
-                                <p class="text-white"><strong>Transmission:</strong> Automatic</p>
-                                <p class="text-white"><strong>Dealer:</strong> CarSphere Hyderabad</p>
-                                <p class="text-white"><strong>Warranty:</strong> 3 Years / 100,000 KM</p>
-                            </div>
-                            <div class="brand-action-buttons-large d-flex gap-2">
-                                <button class="btn btn-primary btn-lg flex-grow-1" data-bs-toggle="modal"
-                                    data-bs-target="#carModal">View Details</button>
-                                <button class="btn btn-outline-primary btn-lg flex-grow-1">View Live</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="brand-carousel-container">
-                            <div id="carousel-honda" class="carousel carousel-fade slide brand-carousel-item" data-bs-ride="carousel"
-                                data-bs-interval="5000">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="assets/images/cars/honda/honda-logo.avif" alt="Honda Logo"
-                                            onerror="this.src='assets/images/logo/CarSphere.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/honda/honda-1.avif" alt="Honda Civic 1"
-                                            onerror="this.src='assets/images/cars/honda/honda-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/honda/honda-2.avif" alt="Honda Civic 2"
-                                            onerror="this.src='assets/images/cars/honda/honda-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/honda/honda-3.avif" alt="Honda Civic 3"
-                                            onerror="this.src='assets/images/cars/honda/honda-1.avif'">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/cars/honda/honda-4.avif" alt="Honda Civic 4"
-                                            onerror="this.src='assets/images/cars/honda/honda-1.avif'">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-honda"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-honda"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <div class="modal fade" id="carModal" tabindex="-1">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="carModalTitle">Car Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="car-detail-content">
-
-                        <div class="row mb-4">
-                            <div class="col-md-8">
-                                <div id="carImageCarousel" class="carousel carousel-fade slide car-modal-carousel"
-                                    data-bs-ride="carousel" data-bs-interval="5000">
-                                    <div class="carousel-inner" id="carImageCarouselInner">
-
-                                    </div>
-                                    <button class="carousel-control-prev" type="button"
-                                        data-bs-target="#carImageCarousel" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon"></span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button"
-                                        data-bs-target="#carImageCarousel" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon"></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="car-info-quick">
-                                    <h5 class="text-warning mb-3">Quick Info</h5>
-                                    <table class="table table-sm table-dark table-borderless">
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-white">Year:</td>
-                                                <td class="text-white fw-bold" id="carDetailYear">-</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-white">Price:</td>
-                                                <td class="text-warning fw-bold" id="carDetailPrice">-</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-white">Location:</td>
-                                                <td class="text-white" id="carDetailLocation">-</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-white">Dealer:</td>
-                                                <td class="text-white" id="carDetailDealer">-</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-white">Warranty:</td>
-                                                <td class="text-warning" id="carDetailWarranty">-</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-12">
-                                <h5 class="text-warning mb-3">Features & Specifications</h5>
-                                <div class="table-responsive">
-                                    <table class="table table-dark table-bordered table-hover">
-                                        <thead>
-                                            <tr class="table-dark">
-                                                <th colspan="2" class="text-warning">Technical Details</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="carFeaturesTable">
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="compareCarBtn">Add to Compare</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <section id="compare" class="comparison-section">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Compare Vehicles</h2>
-            <div class="row mb-4">
-                <div class="col-12">
-                    <p class="text-center text-white">Select up to 3 cars to compare</p>
-                </div>
-            </div>
-            <div class="row mb-4" id="compareSelectionContainer">
-                <!-- Car Selection Card 1: BMW -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="compare-card cursor-pointer" role="button" tabindex="0">
-                        <div class="compare-card-image-wrapper">
-                            <img src="assets/images/cars/bmw/bmw-1.avif" alt="BMW 3 Series" class="compare-card-image" 
-                                onerror="this.src='assets/images/logo/CarSphere.avif'">
-                            <div class="compare-card-overlay"></div>
-                            <div class="compare-selection-indicator">
-                                <div class="comparison-checkbox"></div>
-                            </div>
-                        </div>
-                        <div class="compare-card-body">
-                            <h5 class="compare-card-title">BMW 3 Series</h5>
-                            <p class="compare-card-subtitle">Luxury Performance Sedan</p>
-                            <div class="compare-card-details mb-3">
-                                <p class="compare-detail-item"><strong>Price:</strong> <span class="text-warning">PKR 120L</span></p>
-                                <p class="compare-detail-item"><strong>Engine:</strong> 2.0L Turbo</p>
-                                <p class="compare-detail-item"><strong>Year:</strong> 2024</p>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary w-100 select-car-btn">Select for Comparison</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car Selection Card 2: Audi -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="compare-card cursor-pointer" role="button" tabindex="0">
-                        <div class="compare-card-image-wrapper">
-                            <img src="assets/images/cars/audi/audi-1.avif" alt="Audi Q7" class="compare-card-image"
-                                onerror="this.src='assets/images/logo/CarSphere.avif'">
-                            <div class="compare-card-overlay"></div>
-                            <div class="compare-selection-indicator">
-                                <div class="comparison-checkbox"></div>
-                            </div>
-                        </div>
-                        <div class="compare-card-body">
-                            <h5 class="compare-card-title">Audi Q7</h5>
-                            <p class="compare-card-subtitle">Luxury Premium SUV</p>
-                            <div class="compare-card-details mb-3">
-                                <p class="compare-detail-item"><strong>Price:</strong> <span class="text-warning">PKR 220L</span></p>
-                                <p class="compare-detail-item"><strong>Engine:</strong> 3.0L Turbo</p>
-                                <p class="compare-detail-item"><strong>Year:</strong> 2024</p>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary w-100 select-car-btn">Select for Comparison</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car Selection Card 3: Porsche -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="compare-card cursor-pointer" role="button" tabindex="0">
-                        <div class="compare-card-image-wrapper">
-                            <img src="assets/images/cars/porsche/porsche-1.avif" alt="Porsche 911" class="compare-card-image"
-                                onerror="this.src='assets/images/logo/CarSphere.avif'">
-                            <div class="compare-card-overlay"></div>
-                            <div class="compare-selection-indicator">
-                                <div class="comparison-checkbox"></div>
-                            </div>
-                        </div>
-                        <div class="compare-card-body">
-                            <h5 class="compare-card-title">Porsche 911</h5>
-                            <p class="compare-card-subtitle">Legendary Sports Car</p>
-                            <div class="compare-card-details mb-3">
-                                <p class="compare-detail-item"><strong>Price:</strong> <span class="text-warning">PKR 750L</span></p>
-                                <p class="compare-detail-item"><strong>Engine:</strong> 3.8L Turbo</p>
-                                <p class="compare-detail-item"><strong>Year:</strong> 2024</p>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary w-100 select-car-btn">Select for Comparison</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-primary btn-lg mb-4" id="comparisonBtn">Show Comparison</button>
-            <div id="comparisonResultContainer" class="table-responsive" style="display: none;">
-                <table class="table table-dark table-borderless comparison-table">
-                    <thead>
-                        <tr id="comparisonHeaderRow">
-                        </tr>
-                    </thead>
-                    <tbody id="comparisonFeaturesRow">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="financing" class="financing-section">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Financing & Warranty</h2>
-
-
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h4 class="text-warning mb-4">Warranty Schemes</h4>
-                </div>
-                <div class="row" id="warrantyContainer">
-                    <div class="col-md-4 mb-4">
-                        <div class="warranty-card">
-                            <div class="warranty-icon">
-                                <i class="bi bi-shield-check"></i>
-                            </div>
-                            <h5 class="text-warning mb-3">3-Year Basic Warranty</h5>
-                            <ul class="warranty-features">
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>Complete engine coverage</li>
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>100,000 KM limit</li>
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>Free maintenance</li>
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>24/7 roadside support</li>
-                            </ul>
-                            <p class="text-accent mt-3 mb-0"><strong>PKR 40,000</strong></p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="warranty-card premium">
-                            <div class="warranty-badge">MOST POPULAR</div>
-                            <div class="warranty-icon">
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <h5 class="text-warning mb-3">5-Year Premium Warranty</h5>
-                            <ul class="warranty-features">
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>Full vehicle coverage</li>
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>150,000 KM limit</li>
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>Free maintenance & repairs</li>
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>Replacement vehicle</li>
-                            </ul>
-                            <p class="text-accent mt-3 mb-0"><strong>PKR 85,000</strong></p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="warranty-card">
-                            <div class="warranty-icon">
-                                <i class="bi bi-gem"></i>
-                            </div>
-                            <h5 class="text-warning mb-3">7-Year Platinum Warranty</h5>
-                            <ul class="warranty-features">
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>Lifetime coverage</li>
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>Unlimited KM</li>
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>Premium repairs included</li>
-                                <li><i class="bi bi-check-circle text-primary me-2"></i>Priority service</li>
-                            </ul>
-                            <p class="text-accent mt-3 mb-0"><strong>PKR 150,000</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-12 mb-4">
-                    <h4 class="text-warning mb-2">Flexible Financing Options</h4>
-                    <p class="text-white small mb-4">Get up to 60% financing on your vehicle purchase with competitive rates</p>
-                </div>
-                <div class="row" id="banksContainer">
-                    <div class="col-md-3 mb-4">
-                        <div class="financing-option">
-                            <div class="financing-badge">60% Down Payment</div>
-                            <h6 class="text-primary mb-2">Standard Plan</h6>
-                            <ul class="financing-features">
-                                <li><strong>Duration:</strong> Up to 60 months</li>
-                                <li><strong>Interest Rate:</strong> 4.5% - 6.5% p.a.</li>
-                                <li><strong>Processing:</strong> Quick approval</li>
-                                <li><strong>Documents:</strong> Minimal required</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="financing-option">
-                            <div class="financing-badge">50% Down Payment</div>
-                            <h6 class="text-primary mb-2">Premium Plan</h6>
-                            <ul class="financing-features">
-                                <li><strong>Duration:</strong> Up to 72 months</li>
-                                <li><strong>Interest Rate:</strong> 5.0% - 7.0% p.a.</li>
-                                <li><strong>Balance Transfer:</strong> Allowed</li>
-                                <li><strong>Insurance:</strong> Included</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="financing-option">
-                            <div class="financing-badge">40% Down Payment</div>
-                            <h6 class="text-primary mb-2">Elite Plan</h6>
-                            <ul class="financing-features">
-                                <li><strong>Duration:</strong> Up to 84 months</li>
-                                <li><strong>Interest Rate:</strong> 5.5% - 7.5% p.a.</li>
-                                <li><strong>Free EMI:</strong> First 3 months</li>
-                                <li><strong>Cashback:</strong> Up to 2%</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="financing-option">
-                            <div class="financing-badge">Zero Down Payment</div>
-                            <h6 class="text-primary mb-2">Special Offer</h6>
-                            <ul class="financing-features">
-                                <li><strong>Duration:</strong> Flexible terms</li>
-                                <li><strong>Interest Rate:</strong> Negotiable</li>
-                                <li><strong>Eligibility:</strong> Premium buyers</li>
-                                <li><strong>Bonus:</strong> Free accessories</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="financing-partners-carousel-section">
-        <div class="container-fluid">
-            <h3 class="section-title text-center mb-4">Our Financing Partners</h3>
-            <div class="financing-carousel-wrapper">
-                <div class="financing-carousel" id="financingCarousel">
-                    <div class="financing-carousel-item" title="Allied Bank Limited">
-                        <img src="assets/images/financing partners/allied_bank_limited.avif" alt="Allied Bank Limited">
-                    </div>
-                    <div class="financing-carousel-item" title="Bank Al Habib">
-                        <img src="assets/images/financing partners/bank_al_habib.avif" alt="Bank Al Habib">
-                    </div>
-                    <div class="financing-carousel-item" title="Faysal Bank">
-                        <img src="assets/images/financing partners/faysal_bank.avif" alt="Faysal Bank">
-                    </div>
-                    <div class="financing-carousel-item" title="HBL">
-                        <img src="assets/images/financing partners/hbl.avif" alt="HBL">
-                    </div>
-                    <div class="financing-carousel-item" title="MCB Bank">
-                        <img src="assets/images/financing partners/mcb_bank.avif" alt="MCB Bank">
-                    </div>
-                    <div class="financing-carousel-item" title="Meezan Bank">
-                        <img src="assets/images/financing partners/meezan_bank.avif" alt="Meezan Bank">
-                    </div>
-                    <div class="financing-carousel-item" title="Standard Chartered">
-                        <img src="assets/images/financing partners/standard_chartered.avif" alt="Standard Chartered">
-                    </div>
-                    
-                    <div class="financing-carousel-item" title="Allied Bank Limited">
-                        <img src="assets/images/financing partners/allied_bank_limited.avif" alt="Allied Bank Limited">
-                    </div>
-                    <div class="financing-carousel-item" title="Bank Al Habib">
-                        <img src="assets/images/financing partners/bank_al_habib.avif" alt="Bank Al Habib">
-                    </div>
-                    <div class="financing-carousel-item" title="Faysal Bank">
-                        <img src="assets/images/financing partners/faysal_bank.avif" alt="Faysal Bank">
-                    </div>
-                    <div class="financing-carousel-item" title="HBL">
-                        <img src="assets/images/financing partners/hbl.avif" alt="HBL">
-                    </div>
-                    <div class="financing-carousel-item" title="MCB Bank">
-                        <img src="assets/images/financing partners/mcb_bank.avif" alt="MCB Bank">
-                    </div>
-                    <div class="financing-carousel-item" title="Meezan Bank">
-                        <img src="assets/images/financing partners/meezan_bank.avif" alt="Meezan Bank">
-                    </div>
-                    <div class="financing-carousel-item" title="Standard Chartered">
-                        <img src="assets/images/financing partners/standard_chartered.avif" alt="Standard Chartered">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="modal fade" id="loanModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">EMI Calculator</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="emiForm">
-                        <div class="mb-3">
-                            <label class="form-label">Car Price (PKR)</label>
-                            <input type="number" class="form-control" id="carPrice" placeholder="Enter car price">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Interest Rate (%) per annum</label>
-                            <input type="number" class="form-control" id="interestRate" step="0.1"
-                                placeholder="Enter interest rate">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Loan Duration (Months)</label>
-                            <input type="number" class="form-control" id="loanDuration" placeholder="Enter months"
-                                min="1" max="84">
-                        </div>
-                        <div class="alert alert-info">
-                            <small>Loan Amount: 60% of Car Price</small>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Calculate EMI</button>
-                    </form>
-                    <div id="emiResult" style="display: none;" class="mt-4">
-                        <div class="card bg-dark border-warning">
-                            <div class="card-body">
-                                <h6 class="text-warning">Loan Details</h6>
-                                <p class="mb-2">Loan Amount: <span id="loanAmount" class="text-warning"></span></p>
-                                <p class="mb-2">Monthly EMI: <span id="monthlyEMI" class="text-warning"></span></p>
-                                <p class="mb-0">Total Amount Payable: <span id="totalPayable"
-                                        class="text-warning"></span></p>
-                            </div>
-                        </div>
-                        <small class="text-white mt-3 d-block">This is an approximate calculation. Terms and conditions
-                            apply.</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <section id="dealers" class="dealers-section">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Find Our Showrooms</h2>
-
-
-            <div class="row mb-5 align-items-center">
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <div class="showroom-info">
-                        <h4 class="text-warning mb-3">Visit Our Premium Showroom</h4>
-                        <p class="text-white mb-3">Experience the CarSphere difference at our state-of-the-art showroom
-                            facility. Browse our exclusive collection of premium vehicles with expert consultation.</p>
-                        <div class="showroom-details">
-                            <p class="mb-2"><i class="bi bi-geo-alt text-primary"></i> <strong>Location:</strong>
-                                Showroom Lane, Hyderabad, Pakistan</p>
-                            <p class="mb-2"><i class="bi bi-telephone text-primary"></i> <strong>Phone:</strong>
-                                +92-326-3186750</p>
-                            <p class="mb-2"><i class="bi bi-clock text-primary"></i> <strong>Hours:</strong> 10 AM - 8
-                                PM Daily</p>
-                        </div>
-                        <button class="btn btn-primary mt-3">Schedule Visit</button>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div id="showroomCarousel" class="carousel carousel-fade slide showroom-carousel" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="assets/images/showroom/CarSphere Showroom-1.avif" alt="Showroom 1"
-                                    class="d-block w-100">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/showroom/CarSphere Showroom-2.avif" alt="Showroom 2"
-                                    class="d-block w-100">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/showroom/CarSphere Showroom-3.avif" alt="Showroom 3"
-                                    class="d-block w-100">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/showroom/CarSphere Showroom-4.avif" alt="Showroom 4"
-                                    class="d-block w-100">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/showroom/CarSphere Showroom-5.avif" alt="Showroom 5"
-                                    class="d-block w-100">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/showroom/CarSphere Showroom-6.avif" alt="Showroom 6"
-                                    class="d-block w-100">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#showroomCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#showroomCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h4 class="text-warning mb-3">Our Locations</h4>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-md-3">
-                    <select class="form-select filter-input" id="dealerBrandFilter">
-                        <option value="">All Brands</option>
-                    </select>
-                </div>
-                <div class="col-md-9">
-                    <button class="btn btn-primary" id="showAllDealersBtn">Show All Showrooms</button>
-                </div>
-            </div>
-            <div class="row" id="dealersContainer">
-
-            </div>
-        </div>
-    </section>
-
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h2 class="section-title text-center mb-3">Get In Touch</h2>
-                    <p class="text-center text-white lead">Have questions? We're here to help you find your perfect vehicle.</p>
-                </div>
-            </div>
             <div class="row align-items-center">
-                
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="contact-form-container">
-                        <div class="contact-form-header mb-4">
-                            <i class="bi bi-chat-dots text-primary"></i>
-                            <h3 class="text-warning d-inline-block ms-2">Send us a Message</h3>
+                <div class="col-lg-6">
+                    <div class="hero-badge">
+                        <i class="bi bi-star-fill"></i>
+                        <span>Trusted by 50,000+ learners worldwide</span>
+                    </div>
+                    <h1>Master Tech Skills.<br><span class="gradient-text">Advance Your Career.</span></h1>
+                    <p class="lead">Learn from industry experts with hands-on projects, real-world applications, and a
+                        community of passionate learners.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="courses.html" class="btn btn-primary btn-lg">Explore Courses <i
+                                class="bi bi-arrow-right ms-2"></i></a>
+                        <a href="about.html" class="btn btn-outline-primary btn-lg">Learn More</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <h3>200+</h3>
+                            <p>Expert Courses</p>
                         </div>
-                        <form id="contactForm" class="contact-form">
-                            <div class="mb-3">
-                                <label class="form-label text-white fw-500">Full Name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control contact-input" id="contactName"
-                                    placeholder="Syed Ahmer Shah" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label text-white fw-500">Email Address <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control contact-input" id="contactEmail"
-                                    placeholder="your.email@example.com" required>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-white fw-500">Phone Number</label>
-                                    <input type="tel" class="form-control contact-input" id="contactPhone"
-                                        placeholder="+92-300-0000000">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-white fw-500">Subject <span class="text-danger">*</span></label>
-                                    <select class="form-select contact-input" id="contactSubject" required>
-                                        <option value="">Select a Subject</option>
-                                        <option value="inquiry">Car Inquiry</option>
-                                        <option value="financing">Financing Question</option>
-                                        <option value="test-drive">Test Drive Request</option>
-                                        <option value="feedback">Feedback</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label text-white fw-500">Your Message <span class="text-danger">*</span></label>
-                                <textarea class="form-control contact-input" id="contactMessage" rows="5"
-                                    placeholder="Tell us about your inquiry..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg w-100 btn-submit-contact">
-                                <i class="bi bi-send me-2"></i>Send Message
-                            </button>
-                            <div id="contactFormMessage" style="display: none; margin-top: 1rem;" class="alert"></div>
-                        </form>
+                        <div class="hero-stat">
+                            <h3>50K+</h3>
+                            <p>Active Learners</p>
+                        </div>
+                        <div class="hero-stat">
+                            <h3>4.8</h3>
+                            <p>Average Rating</p>
+                        </div>
                     </div>
                 </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80"
+                            alt="Students learning together online">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                
-                <div class="col-lg-6 ps-lg-4">
-                    <div class="contact-info-container">
-                        <h3 class="text-warning mb-4">
-                            <i class="bi bi-info-circle text-primary me-2"></i>Get in Touch With Us
-                        </h3>
+    <!-- Trusted By -->
+    <section class="trusted-section">
+        <div class="container text-center">
+            <p class="mb-4">Trusted by teams at leading companies</p>
+            <div class="trusted-logos">
+                <span>Google</span>
+                <span>Microsoft</span>
+                <span>Amazon</span>
+                <span>Meta</span>
+                <span>Apple</span>
+                <span>Netflix</span>
+            </div>
+        </div>
+    </section>
 
-                        
-                        <div class="contact-info-item mb-4 p-3 rounded-custom">
-                            <div class="info-icon bg-primary-gradient">
-                                <i class="bi bi-geo-alt-fill"></i>
-                            </div>
-                            <div class="info-content flex-grow-1">
-                                <h5 class="text-white mb-2">📍 Address</h5>
-                                <p class="text-white mb-0">Showroom Lane, Hyderabad, Pakistan</p>
+    <!-- Categories -->
+    <section class="bg-white-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-badge">Categories</span>
+                <h2 class="section-title">Explore Top Categories</h2>
+                <p class="section-subtitle">Choose from a wide range of tech categories and start learning today</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="courses.html" class="text-decoration-none">
+                        <div class="category-card animate-on-scroll">
+                            <div class="icon"><i class="bi bi-code-slash"></i></div>
+                            <h5>Web Development</h5>
+                            <p>25+ Courses</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="courses.html" class="text-decoration-none">
+                        <div class="category-card animate-on-scroll">
+                            <div class="icon"><i class="bi bi-bar-chart-line"></i></div>
+                            <h5>Data Science</h5>
+                            <p>18+ Courses</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="courses.html" class="text-decoration-none">
+                        <div class="category-card animate-on-scroll">
+                            <div class="icon"><i class="bi bi-robot"></i></div>
+                            <h5>AI & ML</h5>
+                            <p>15+ Courses</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="courses.html" class="text-decoration-none">
+                        <div class="category-card animate-on-scroll">
+                            <div class="icon"><i class="bi bi-shield-lock"></i></div>
+                            <h5>Cybersecurity</h5>
+                            <p>12+ Courses</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="courses.html" class="text-decoration-none">
+                        <div class="category-card animate-on-scroll">
+                            <div class="icon"><i class="bi bi-cloud"></i></div>
+                            <h5>Cloud Computing</h5>
+                            <p>14+ Courses</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="courses.html" class="text-decoration-none">
+                        <div class="category-card animate-on-scroll">
+                            <div class="icon"><i class="bi bi-palette"></i></div>
+                            <h5>UI/UX Design</h5>
+                            <p>10+ Courses</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="courses.html" class="text-decoration-none">
+                        <div class="category-card animate-on-scroll">
+                            <div class="icon"><i class="bi bi-phone"></i></div>
+                            <h5>Mobile Dev</h5>
+                            <p>11+ Courses</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="courses.html" class="text-decoration-none">
+                        <div class="category-card animate-on-scroll">
+                            <div class="icon"><i class="bi bi-gear"></i></div>
+                            <h5>DevOps</h5>
+                            <p>9+ Courses</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="bg-light-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-badge">Featured</span>
+                <h2 class="section-title">Popular Courses</h2>
+                <p class="section-subtitle">Hand-picked courses loved by thousands of learners</p>
+            </div>
+            <div class="row" id="featuredCourses">
+                <!-- Rendered by JS -->
+            </div>
+            <div class="text-center mt-4">
+                <a href="courses.html" class="btn btn-outline-primary btn-lg">View All Courses <i
+                        class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="bg-white-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-badge">How It Works</span>
+                <h2 class="section-title">Start Learning in 3 Steps</h2>
+                <p class="section-subtitle">Getting started with Novio is quick and easy</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="step-card animate-on-scroll">
+                        <div class="step-number">1</div>
+                        <h5>Choose a Course</h5>
+                        <p>Browse our curated library of tech courses taught by industry experts</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-card animate-on-scroll">
+                        <div class="step-number">2</div>
+                        <h5>Enroll & Learn</h5>
+                        <p>Enroll instantly and start learning at your own pace with lifetime access</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-card animate-on-scroll">
+                        <div class="step-number">3</div>
+                        <h5>Get Certified</h5>
+                        <p>Complete the course, earn your certificate, and advance your career</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-light-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">What Our Learners Say</h2>
+                <p class="section-subtitle">Join thousands of satisfied students who transformed their careers</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <p>"Novio completely changed my career trajectory. The web development bootcamp was exactly what
+                            I needed to land my first developer job."</p>
+                        <div class="author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+                                alt="Sarah M.">
+                            <div>
+                                <h6>Sarah M.</h6>
+                                <span>Frontend Developer at Google</span>
                             </div>
                         </div>
-
-                        
-                        <div class="contact-info-item mb-4 p-3 rounded-custom">
-                            <div class="info-icon bg-primary-gradient">
-                                <i class="bi bi-telephone-fill"></i>
-                            </div>
-                            <div class="info-content flex-grow-1">
-                                <h5 class="text-white mb-2">📞 Phone</h5>
-                                <p class="text-white mb-0"><a href="tel:+92 326-3186750" class="text-decoration-none text-warning fw-bold">+92-326-3186750</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <p>"The data science course was phenomenal. Clear explanations, great projects, and the
+                            instructor support was outstanding."</p>
+                        <div class="author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+                                alt="James L.">
+                            <div>
+                                <h6>James L.</h6>
+                                <span>Data Analyst at Amazon</span>
                             </div>
                         </div>
-
-                        
-                        <div class="contact-info-item mb-4 p-3 rounded-custom">
-                            <div class="info-icon bg-primary-gradient">
-                                <i class="bi bi-envelope-fill"></i>
-                            </div>
-                            <div class="info-content flex-grow-1">
-                                <h5 class="text-white mb-2">✉️ Email</h5>
-                                <p class="text-white mb-0"><a href="mailto:syedahmershahofficial@gmail.com" class="text-decoration-none text-warning fw-bold">syedahmershahofficial@gmail.com</a></p>
-                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-half"></i>
                         </div>
-
-                        
-                        <div class="contact-info-item mb-4 p-3 rounded-custom">
-                            <div class="info-icon bg-primary-gradient">
-                                <i class="bi bi-clock-fill"></i>
+                        <p>"Best investment I've ever made. The cloud computing course helped me get AWS certified and I
+                            got a 40% raise!"</p>
+                        <div class="author">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&q=80"
+                                alt="David K.">
+                            <div>
+                                <h6>David K.</h6>
+                                <span>Cloud Engineer at Microsoft</span>
                             </div>
-                            <div class="info-content flex-grow-1">
-                                <h5 class="text-white mb-2">🕐 Business Hours</h5>
-                                <p class="text-white mb-1"><strong>Mon - Fri:</strong> 10:00 AM - 8:00 PM</p>
-                                <p class="text-white mb-0"><strong>Sat - Sun:</strong> 12:00 PM - 8:00 PM</p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="social-links-container mt-5 p-4 bg-gradient-custom rounded-custom">
-                            <h5 class="text-white mb-4">
-                                <i class="bi bi-share text-primary me-2"></i>Follow Us & Connect With Developer
-                            </h5>
-                            <div class="social-links">
-                                <a href="https://www.instagram.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Instagram - ahmershah29"><i class="bi bi-instagram"></i></a>
-                                <a href="https://www.facebook.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Facebook - ahmershah29"><i class="bi bi-facebook"></i></a>
-                                <a href="https://twitter.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Twitter - ahmershah29"><i class="bi bi-twitter"></i></a>
-                                <a href="https://www.linkedin.com/in/syedahmershah" target="_blank" class="text-warning social-link social-link-car" title="LinkedIn - syedahmershah"><i class="bi bi-linkedin"></i></a>
-                                <a href="https://github.com/ahmershahdev" target="_blank" class="text-warning social-link social-link-car" title="GitHub - ahmershahdev"><i class="bi bi-github"></i></a>
-                            </div>
-                            <small class="text-white mt-3 d-block">Developed by <strong>Syed Ahmer Shah</strong></small>
                         </div>
                     </div>
                 </div>
@@ -1172,98 +327,121 @@
         </div>
     </section>
 
-    <footer class="footer-section">
+    <!-- Stats -->
+    <section class="bg-white-section">
         <div class="container">
-            <div class="row pb-5">
-               
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-column">
-                        <div class="footer-brand-container mb-3">
-                            <img src="assets/images/logo/CarSphere.avif" alt="CarSphere" class="footer-logo mb-2">
-                            <h5 class="text-warning mb-2">CarSphere</h5>
-                        </div>
-                        <p class="text-white small mb-4">Premium automotive solutions delivering excellence in every vehicle. Your trusted partner in the automotive journey.</p>
-                        <div class="social-links footer-social-links">
-                            <a href="https://www.instagram.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Instagram"><i class="bi bi-instagram"></i></a>
-                            <a href="https://www.facebook.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="https://twitter.com/ahmershah29" target="_blank" class="text-warning social-link social-link-car" title="Twitter"><i class="bi bi-twitter"></i></a>
-                            <a href="https://www.linkedin.com/in/syedahmershah" target="_blank" class="text-warning social-link social-link-car" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                            <a href="https://github.com/ahmershahdev" target="_blank" class="text-warning social-link social-link-car" title="GitHub"><i class="bi bi-github"></i></a>
-                        </div>
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item animate-on-scroll">
+                        <h3>200+</h3>
+                        <p>Expert Courses</p>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-column">
-                        <h6 class="text-warning mb-4 footer-section-title">Quick Navigation</h6>
-                        <ul class="list-unstyled footer-links">
-                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#home" class="text-decoration-none text-white">Home</a></li>
-                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#catalog" class="text-decoration-none text-white">Catalog</a></li>
-                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#compare" class="text-decoration-none text-white">Compare</a></li>
-                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#financing" class="text-decoration-none text-white">Financing</a></li>
-                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#dealers" class="text-decoration-none text-white">Showrooms</a></li>
-                            <li><i class="bi bi-chevron-right text-primary me-2"></i><a href="#contact" class="text-decoration-none text-white">Contact</a></li>
-                        </ul>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item animate-on-scroll">
+                        <h3>50K+</h3>
+                        <p>Active Learners</p>
                     </div>
                 </div>
-
-                
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-column">
-                        <h6 class="text-warning mb-4 footer-section-title">Our Services</h6>
-                        <ul class="list-unstyled footer-links">
-                            <li><i class="bi bi-car-front text-primary me-2"></i><a href="#financing" class="text-decoration-none text-white">Car Financing</a></li>
-                            <li><i class="bi bi-speedometer text-primary me-2"></i><a href="#" class="text-decoration-none text-white">Test Drive</a></li>
-                            <li><i class="bi bi-coin text-primary me-2"></i><a href="#" class="text-decoration-none text-white">Trade-In</a></li>
-                            <li><i class="bi bi-shield-check text-primary me-2"></i><a href="#financing" class="text-decoration-none text-white">Warranty</a></li>
-                            <li><i class="bi bi-telephone text-primary me-2"></i><a href="#contact" class="text-decoration-none text-white">Support</a></li>
-                        </ul>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item animate-on-scroll">
+                        <h3>120+</h3>
+                        <p>Expert Instructors</p>
                     </div>
                 </div>
-
-                
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-column">
-                        <h6 class="text-warning mb-4 footer-section-title">Get in Touch</h6>
-                        <div class="footer-contact-info mb-4">
-                            <p class="text-white small mb-2"><i class="bi bi-telephone text-primary me-2"></i><a href="tel:+923263186750" class="text-white text-decoration-none">+92-326-3186750</a></p>
-                            <p class="text-white small mb-2"><i class="bi bi-envelope text-primary me-2"></i><a href="mailto:syedahmershahofficial@gmail.com" class="text-white text-decoration-none">syedahmershahofficial@gmail.com</a></p>
-                            <p class="text-white small"><i class="bi bi-geo-alt text-primary me-2"></i>Hyderabad, Pakistan</p>
-                        </div>
-                        <h6 class="text-warning mb-3 footer-section-title-small">Newsletter</h6>
-                        <p class="text-white small mb-3">Subscribe for exclusive offers & updates.</p>
-                        <form class="newsletter-form">
-                            <div class="input-group">
-                                <input type="email" class="form-control newsletter-input" placeholder="Your email" required>
-                                <button class="btn btn-primary btn-sm" type="submit" title="Subscribe"><i class="bi bi-send"></i></button>
-                            </div>
-                        </form>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item animate-on-scroll">
+                        <h3>95%</h3>
+                        <p>Satisfaction Rate</p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start">
-                        <p class="text-white mb-0 small">&copy; 2026 CarSphere by Syed Ahmer Shah. All rights reserved. | Developed with <i class="bi bi-cup-hot text-danger"></i> in Hyderabad</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="footer-links-bottom text-center text-md-end">
-                            <a href="#" class="text-white text-decoration-none small me-3">Privacy Policy</a>
-                            <a href="#" class="text-white text-decoration-none small me-3">Terms of Service</a>
-                            <a href="#" class="text-white text-decoration-none small">Cookie Policy</a>
-                        </div>
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Learning?</h2>
+            <p>Join 50,000+ learners and start your journey to mastering in-demand tech skills today.</p>
+            <a href="signup.html" class="btn btn-lg">Get Started Free <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>Novio</h5>
+                    <p>Empowering learners worldwide with premium tech courses from industry experts.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Platform</h6>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Support</h6>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6>Newsletter</h6>
+                    <p>Stay updated with new courses and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Novio. All rights reserved.</p>
+                <p>Made with <i class="bi bi-heart-fill" style="color:#EF4444;"></i> for learners everywhere</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Novio",
+    "description": "Premium online tech courses platform",
+    "url": "https://novio.com",
+    "sameAs": [],
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "49.99",
+      "highPrice": "249.99",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </body>
 
 </html>

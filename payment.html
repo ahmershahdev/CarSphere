@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your course purchase securely on Novio.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Payment | Novio</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Novio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Novio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="cart.html" class="btn btn-icon position-relative" aria-label="Cart">
+                            <i class="bi bi-cart3"></i>
+                            <span class="cart-badge badge" data-count="0">0</span>
+                        </a>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm" id="loginBtn">Log In</a>
+                        <a href="signup.html" class="btn btn-primary btn-sm" id="signupBtn">Sign Up</a>
+                        <a href="account.html" class="btn btn-icon d-none" id="accountBtn" aria-label="Account">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-badge">Secure Checkout</span>
+            <h1>Payment</h1>
+            <p>Complete your purchase to start learning</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cart.html">Cart</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Payment</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="py-5" id="paymentPage">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Payment Form -->
+                <div class="col-lg-7">
+                    <form id="paymentForm" novalidate>
+                        <!-- Personal Info -->
+                        <div class="payment-card mb-4">
+                            <h5><i class="bi bi-person me-2"></i>Personal Information</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small" for="payName">Full Name *</label>
+                                    <input type="text" class="form-control" id="payName" placeholder="John Doe"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small" for="payEmail">Email Address *</label>
+                                    <input type="email" class="form-control" id="payEmail" placeholder="you@example.com"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small" for="payPhone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="payPhone"
+                                        placeholder="+1 (555) 000-0000">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small" for="payCountry">Country</label>
+                                    <select class="form-select" id="payCountry"
+                                        style="border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;font-size:0.925rem;">
+                                        <option value="">Select country</option>
+                                        <option value="US">United States</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="FR">France</option>
+                                        <option value="IN">India</option>
+                                        <option value="OTHER">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="payment-card mb-4">
+                            <h5><i class="bi bi-credit-card me-2"></i>Payment Method</h5>
+                            <div class="payment-methods">
+                                <div class="method-option active">
+                                    <i class="bi bi-credit-card-2-front"></i>
+                                    Credit Card
+                                </div>
+                                <div class="method-option">
+                                    <i class="bi bi-paypal"></i>
+                                    PayPal
+                                </div>
+                                <div class="method-option">
+                                    <i class="bi bi-wallet2"></i>
+                                    Wallet
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label class="form-label small" for="cardNumber">Card Number</label>
+                                    <input type="text" class="form-control" id="cardNumber"
+                                        placeholder="1234 5678 9012 3456" maxlength="19">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small" for="cardExpiry">Expiry Date</label>
+                                    <input type="text" class="form-control" id="cardExpiry" placeholder="MM/YY"
+                                        maxlength="5">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small" for="cardCVV">CVV</label>
+                                    <input type="text" class="form-control" id="cardCVV" placeholder="123"
+                                        maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            <i class="bi bi-lock me-2"></i>Complete Payment
+                        </button>
+
+                        <div class="text-center mt-3">
+                            <p class="small text-muted"><i class="bi bi-shield-check me-1"></i>256-bit SSL encrypted
+                                secure payment</p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-5">
+                    <div class="cart-summary">
+                        <h5>Order Summary</h5>
+                        <div id="paymentOrderItems">
+                            <!-- Rendered by JS -->
+                        </div>
+                        <div class="summary-row mt-3">
+                            <span>Subtotal</span>
+                            <span id="paymentSubtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span>$0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="paymentTotal">$0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="mt-4 text-center">
+                        <div class="d-flex justify-content-center gap-4 small text-muted">
+                            <div><i class="bi bi-shield-check d-block fs-4 text-success mb-1"></i>Secure</div>
+                            <div><i class="bi bi-arrow-repeat d-block fs-4 text-primary mb-1"></i>30-Day Refund</div>
+                            <div><i class="bi bi-infinity d-block fs-4 text-info mb-1"></i>Lifetime Access</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>Novio</h5>
+                    <p>Empowering learners worldwide with premium tech courses from industry experts.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Platform</h6>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Support</h6>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6>Newsletter</h6>
+                    <p>Stay updated with new courses and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Novio. All rights reserved.</p>
+                <p>Made with <i class="bi bi-heart-fill" style="color:#EF4444;"></i> for learners everywhere</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

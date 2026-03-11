@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse all Novio tech courses. Filter by category, level, and price. Learn web development, data science, AI, and more.">
+    <meta name="keywords"
+        content="online courses, tech courses, programming courses, web development course, data science course">
+    <meta name="author" content="Novio">
+    <meta property="og:title" content="Browse Courses | Novio">
+    <meta property="og:description" content="Explore our library of premium tech courses taught by industry experts.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://novio.com/courses.html">
+    <title>Browse Courses | Novio</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Novio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Novio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="courses.html">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="cart.html" class="btn btn-icon position-relative" aria-label="Cart">
+                            <i class="bi bi-cart3"></i>
+                            <span class="cart-badge badge" data-count="0">0</span>
+                        </a>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm" id="loginBtn">Log In</a>
+                        <a href="signup.html" class="btn btn-primary btn-sm" id="signupBtn">Sign Up</a>
+                        <a href="account.html" class="btn btn-icon d-none" id="accountBtn" aria-label="Account">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-badge">Learn & Grow</span>
+            <h1>Browse Courses</h1>
+            <p>Discover our curated library of tech courses and start building the skills you need</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="bg-white-section">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Sidebar Filters -->
+                <div class="col-lg-3">
+                    <div class="filter-sidebar">
+                        <!-- Search -->
+                        <div class="filter-group">
+                            <h6>Search</h6>
+                            <div class="search-input-wrapper">
+                                <i class="bi bi-search"></i>
+                                <input type="text" id="courseSearch" placeholder="Search courses..."
+                                    class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Category Filter -->
+                        <div class="filter-group">
+                            <h6>Category</h6>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-category" type="checkbox"
+                                    value="Web Development" id="catWeb">
+                                <label class="form-check-label" for="catWeb">Web Development</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-category" type="checkbox"
+                                    value="Data Science" id="catData">
+                                <label class="form-check-label" for="catData">Data Science</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-category" type="checkbox"
+                                    value="Programming" id="catProg">
+                                <label class="form-check-label" for="catProg">Programming</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-category" type="checkbox"
+                                    value="Design" id="catDesign">
+                                <label class="form-check-label" for="catDesign">Design</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-category" type="checkbox"
+                                    value="Artificial Intelligence" id="catAI">
+                                <label class="form-check-label" for="catAI">AI & Machine Learning</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-category" type="checkbox"
+                                    value="Cybersecurity" id="catCyber">
+                                <label class="form-check-label" for="catCyber">Cybersecurity</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-category" type="checkbox"
+                                    value="Cloud Computing" id="catCloud">
+                                <label class="form-check-label" for="catCloud">Cloud Computing</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-category" type="checkbox"
+                                    value="DevOps" id="catDevOps">
+                                <label class="form-check-label" for="catDevOps">DevOps</label>
+                            </div>
+                        </div>
+
+                        <!-- Level Filter -->
+                        <div class="filter-group">
+                            <h6>Level</h6>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-level" type="checkbox"
+                                    value="Beginner" id="lvlBeg">
+                                <label class="form-check-label" for="lvlBeg">Beginner</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-level" type="checkbox"
+                                    value="Intermediate" id="lvlInt">
+                                <label class="form-check-label" for="lvlInt">Intermediate</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input filter-check filter-level" type="checkbox"
+                                    value="Advanced" id="lvlAdv">
+                                <label class="form-check-label" for="lvlAdv">Advanced</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Grid -->
+                <div class="col-lg-9">
+                    <div class="courses-toolbar">
+                        <span class="result-count">9 courses found</span>
+                        <select class="sort-select" id="sortSelect">
+                            <option value="default">Sort by: Default</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                    <div class="row" id="allCourses">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Can't Find What You're Looking For?</h2>
+            <p>New courses are added every week. Subscribe for updates.</p>
+            <a href="contact.html" class="btn btn-lg">Contact Us <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>Novio</h5>
+                    <p>Empowering learners worldwide with premium tech courses from industry experts.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Platform</h6>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Support</h6>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6>Newsletter</h6>
+                    <p>Stay updated with new courses and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Novio. All rights reserved.</p>
+                <p>Made with <i class="bi bi-heart-fill" style="color:#EF4444;"></i> for learners everywhere</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

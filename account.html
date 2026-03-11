@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your Novio account, view enrolled courses, and update your profile.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>My Account | Novio</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Novio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Novio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="cart.html" class="btn btn-icon position-relative" aria-label="Cart">
+                            <i class="bi bi-cart3"></i>
+                            <span class="cart-badge badge" data-count="0">0</span>
+                        </a>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm" id="loginBtn">Log In</a>
+                        <a href="signup.html" class="btn btn-primary btn-sm" id="signupBtn">Sign Up</a>
+                        <a href="account.html" class="btn btn-icon d-none" id="accountBtn" aria-label="Account">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-badge">Dashboard</span>
+            <h1>My Account</h1>
+            <p>Manage your profile, courses, and settings</p>
+        </div>
+    </section>
+
+    <!-- Account Section -->
+    <section class="py-5" id="accountPage">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="account-sidebar">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <div class="profile-initials"
+                                style="width:80px;height:80px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.75rem;font-weight:700;">
+                                US</div>
+                        </div>
+                        <h5 id="accName">User Name</h5>
+                        <p id="accEmail">user@email.com</p>
+                        <ul class="account-nav">
+                            <li><a href="#tab-profile" class="active"><i class="bi bi-person"></i>Profile</a></li>
+                            <li><a href="#tab-courses"><i class="bi bi-book"></i>My Courses</a></li>
+                            <li><a href="#tab-settings"><i class="bi bi-gear"></i>Settings</a></li>
+                        </ul>
+                        <hr>
+                        <button class="btn btn-outline-primary w-100 btn-sm" id="logoutBtn">
+                            <i class="bi bi-box-arrow-right me-2"></i>Log Out
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="col-lg-9 account-content">
+                    <!-- Profile Tab -->
+                    <div class="account-tab" id="tab-profile">
+                        <div class="card-custom">
+                            <h5><i class="bi bi-person-lines-fill me-2"></i>Personal Information</h5>
+                            <form id="editProfileForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small" for="editName">Full Name</label>
+                                        <input type="text" class="form-control" id="editName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small" for="editEmail">Email Address</label>
+                                        <input type="email" class="form-control" id="editEmail" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small" for="editPhone">Phone Number</label>
+                                        <input type="tel" class="form-control" id="editPhone">
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Courses Tab -->
+                    <div class="account-tab d-none" id="tab-courses">
+                        <div class="card-custom">
+                            <h5><i class="bi bi-collection-play me-2"></i>Enrolled Courses</h5>
+                            <div id="enrolledCourses">
+                                <!-- Rendered by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div class="account-tab d-none" id="tab-settings">
+                        <div class="card-custom">
+                            <h5><i class="bi bi-lock me-2"></i>Change Password</h5>
+                            <form id="changePasswordForm">
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <label class="form-label small" for="currentPassword">Current Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="currentPassword" required>
+                                            <button class="btn btn-toggle-password" type="button"
+                                                aria-label="Toggle password visibility">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small" for="newPassword">New Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="newPassword" required
+                                                minlength="8">
+                                            <button class="btn btn-toggle-password" type="button"
+                                                aria-label="Toggle password visibility">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small" for="confirmNewPassword">Confirm New
+                                            Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="confirmNewPassword" required
+                                                minlength="8">
+                                            <button class="btn btn-toggle-password" type="button"
+                                                aria-label="Toggle password visibility">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Update Password</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>Novio</h5>
+                    <p>Empowering learners worldwide with premium tech courses from industry experts.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Platform</h6>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Support</h6>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6>Newsletter</h6>
+                    <p>Stay updated with new courses and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Novio. All rights reserved.</p>
+                <p>Made with <i class="bi bi-heart-fill" style="color:#EF4444;"></i> for learners everywhere</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

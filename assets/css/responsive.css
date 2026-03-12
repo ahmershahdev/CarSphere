@@ -22,6 +22,18 @@
   #testimonialCarousel {
     padding: 0 40px;
   }
+
+  .filter-sidebar {
+    margin-bottom: 24px;
+  }
+
+  .bg-white-section .col-lg-3 {
+    order: -1;
+  }
+
+  .course-card .card-body .card-meta {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 767px) {
@@ -146,6 +158,34 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .courses-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-row {
+    gap: 8px;
+  }
+
+  .stat-pill {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .category-chip {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .course-card .card-footer-custom {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .course-card .card-footer-custom .btn-enroll {
+    width: 100%;
   }
 }
 

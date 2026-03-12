@@ -12,11 +12,14 @@ $(function () {
       $("#cdImage").attr("src", course.image).attr("alt", course.title);
       $("#cdInstructor").text(course.instructor);
       $("#cdInstructorImg").attr("src", course.instructorImg);
+      $("#cdInstructorName").text(course.instructor);
       $("#cdRating").text(course.rating);
       $("#cdReviews").text("(" + course.reviews.toLocaleString() + " reviews)");
       $("#cdStudents").text(course.students.toLocaleString() + " students");
-      $("#cdPrice").text("$" + course.price.toFixed(2));
-      $("#cdOriginalPrice").text("$" + course.originalPrice.toFixed(2));
+      $("#cdPrice").text("PKR " + course.price.toLocaleString());
+      $("#cdOriginalPrice").text(
+        "PKR " + course.originalPrice.toLocaleString(),
+      );
       $("#cdDuration").text(course.duration);
       $("#cdLessons").text(course.lessons + " lessons");
       $("#cdLevel").text(course.level);

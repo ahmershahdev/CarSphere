@@ -66,10 +66,10 @@
     ")</span>" +
     "</div>" +
     '<div class="card-footer-custom">' +
-    '<div class="price">$' +
-    course.price.toFixed(2) +
-    '<span class="original">$' +
-    course.originalPrice.toFixed(2) +
+    '<div class="price">PKR ' +
+    course.price.toLocaleString() +
+    '<span class="original">PKR ' +
+    course.originalPrice.toLocaleString() +
     "</span></div>" +
     '<button class="btn-enroll" onclick="addToCart(' +
     course.id +

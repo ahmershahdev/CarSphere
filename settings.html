@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manage your Novio account settings. Update notifications, privacy preferences, and security options.">
+    <meta name="description"
+        content="Manage your Novio account settings. Update notifications, privacy preferences, and security options.">
     <meta name="robots" content="noindex, nofollow">
     <meta name="author" content="Syed Ahmer Shah">
     <title>Account Settings | NOVIO</title>
@@ -38,14 +39,16 @@
             <a class="navbar-brand-logo" href="index.html">
                 <img src="assets/images/logo/novio-logo.png" alt="Novio" class="logo-img">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav"
+                aria-controls="mobileNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="mobileNav"><div class="navbar-inner">
+            <div class="collapse navbar-collapse" id="mobileNav">
+                <div class="navbar-inner">
                     <div class="navbar-search">
                         <i class="bi bi-search search-icon"></i>
-                        <input type="text" class="search-input" placeholder="Search courses..." aria-label="Search courses" role="searchbox">
+                        <input type="text" class="search-input" placeholder="Search courses..."
+                            aria-label="Search courses" role="searchbox">
                         <div class="nav-search-suggestions"></div>
                     </div>
                     <ul class="navbar-nav">
@@ -127,11 +130,16 @@
                         </div>
                         <p class="mobile-menu-section-title">Follow Us</p>
                         <div class="mobile-social-links">
-                            <a href="https://facebook.com/ahmershah29" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="https://x.com/ahmershah29" target="_blank" rel="noopener" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-                            <a href="https://linkedin.com/in/syedahmershah" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                            <a href="https://github.com/ahmershahdev" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
-                            <a href="https://youtube.com/@ahmershahdev" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="https://facebook.com/ahmershah29" target="_blank" rel="noopener"
+                                aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://x.com/ahmershah29" target="_blank" rel="noopener" aria-label="X"><i
+                                    class="bi bi-twitter-x"></i></a>
+                            <a href="https://linkedin.com/in/syedahmershah" target="_blank" rel="noopener"
+                                aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/ahmershahdev" target="_blank" rel="noopener"
+                                aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="https://youtube.com/@ahmershahdev" target="_blank" rel="noopener"
+                                aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                         </div>
                     </div>
                     <div class="d-flex align-items-center gap-2">
@@ -254,14 +262,52 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label class="form-label fw-semibold">New Password</label>
-                                <input type="password" class="form-control">
+                                <input type="password" class="form-control" id="settingsNewPass">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-semibold">Confirm Password</label>
-                                <input type="password" class="form-control">
+                                <input type="password" class="form-control" id="settingsConfirmPass">
                             </div>
                             <div class="col-12">
-                                <button type="button" class="btn btn-primary">Update Password</button>
+                                <button type="button" class="btn btn-primary" id="btnUpdatePassword">Update
+                                    Password</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0 shadow-sm p-4 mt-4" id="privacy">
+                        <h5 class="fw-bold mb-3">Privacy</h5>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="profileVisibility" checked>
+                            <label class="form-check-label" for="profileVisibility">Make profile visible to
+                                others</label>
+                        </div>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="showProgress" checked>
+                            <label class="form-check-label" for="showProgress">Show course progress on profile</label>
+                        </div>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="activityStatus">
+                            <label class="form-check-label" for="activityStatus">Show activity status</label>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="btnSavePrivacy">Save Privacy Settings</button>
+                    </div>
+                    <div class="card border-0 shadow-sm p-4 mt-4" id="billing">
+                        <h5 class="fw-bold mb-3">Billing</h5>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Payment Method</label>
+                            <div class="d-flex align-items-center gap-3 p-3 border rounded">
+                                <i class="bi bi-credit-card-2-front"
+                                    style="font-size: 1.5rem; color: var(--primary);"></i>
+                                <div>
+                                    <span class="fw-semibold" id="billingCardInfo">No payment method added</span>
+                                    <br><small class="text-muted" id="billingCardExpiry"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Billing History</label>
+                            <div id="billingHistory">
+                                <p class="text-muted">No billing history available.</p>
                             </div>
                         </div>
                     </div>
@@ -275,8 +321,7 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-logo">
-                        <span class="logo-icon">N</span>
-                        <span class="logo-text">NOVIO</span>
+                        <img src="assets/images/logo/novio-logo.png" alt="Novio" class="logo-img">
                     </div>
                     <p>Empowering learners worldwide with premium tech courses from industry experts.</p>
                     <div class="social-links">
@@ -290,7 +335,8 @@
                                 class="bi bi-github"></i></a>
                         <a href="https://youtube.com/@ahmershahdev" aria-label="YouTube" target="_blank"
                             rel="noopener"><i class="bi bi-youtube"></i></a>
-                        <a href="https://ahmershah.dev/" aria-label="Portfolio" target="_blank" rel="noopener"><i class="bi bi-globe2"></i></a>
+                        <a href="https://ahmershah.dev/" aria-label="Portfolio" target="_blank" rel="noopener"><i
+                                class="bi bi-globe2"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
@@ -334,7 +380,8 @@
                     <h6>Newsletter</h6>
                     <p>Stay updated with new courses and exclusive offers.</p>
                     <form class="newsletter-form" aria-label="Newsletter subscription">
-                        <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter" autocomplete="email">
+                        <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter"
+                            autocomplete="email">
                         <button type="submit" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
                     </form>
                 </div>

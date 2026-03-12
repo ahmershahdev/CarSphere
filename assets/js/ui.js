@@ -1,10 +1,10 @@
 ﻿$(function () {
+  var page = window.location.pathname.split("/").pop() || "index.html";
+  if (page !== "index.html" && page !== "courses.html") {
+    $(".navbar-search").hide();
+  }
+
   $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 50) {
-      $(".navbar").addClass("scrolled");
-    } else {
-      $(".navbar").removeClass("scrolled");
-    }
     if ($(this).scrollTop() > 300) {
       $(".back-to-top").addClass("visible");
     } else {
@@ -43,6 +43,7 @@ function initCustomSelects() {
   $("select.form-select, select.sort-select").each(function () {
     var $select = $(this);
     if ($select.closest(".custom-select-wrapper").length) return;
+    if ($select.attr("id") === "contactSubject") return;
 
     var wrapper = $('<div class="custom-select-wrapper"></div>');
     var selectedOpt = $select.find("option:selected");

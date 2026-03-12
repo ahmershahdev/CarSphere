@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn and track your course progress on Novio.">
+    <meta name="author" content="Syed Ahmer Shah">
+    <title>Course Player | NOVIO</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages-account.css">
+    <link rel="stylesheet" href="assets/css/layout-search.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .player-layout {
+            display: flex;
+            min-height: calc(100vh - 72px);
+            margin-top: 72px;
+        }
+
+        .player-sidebar {
+            width: 340px;
+            min-width: 340px;
+            background: var(--bg-white);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            height: calc(100vh - 72px);
+            position: sticky;
+            top: 72px;
+        }
+
+        .player-sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-light);
+        }
+
+        .player-sidebar-header h6 {
+            font-weight: 700;
+            margin-bottom: 4px;
+            font-size: 0.95rem;
+        }
+
+        .player-sidebar-header small {
+            color: var(--text-muted);
+        }
+
+        .progress-section {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .lesson-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 20px;
+            cursor: pointer;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        .lesson-item:hover {
+            background: var(--bg-light);
+        }
+
+        .lesson-item.active {
+            background: var(--primary-ultra-light);
+            border-left: 3px solid var(--primary);
+        }
+
+        .lesson-item.completed .lesson-icon {
+            color: var(--success, #22c55e);
+        }
+
+        .lesson-item.locked {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .lesson-icon {
+            font-size: 1.25rem;
+            margin-top: 2px;
+            color: var(--text-muted);
+            min-width: 24px;
+        }
+
+        .lesson-item.active .lesson-icon {
+            color: var(--primary);
+        }
+
+        .lesson-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .lesson-number {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .lesson-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .lesson-type {
+            font-size: 0.65rem;
+            width: fit-content;
+            padding: 2px 8px;
+        }
+
+        .player-main {
+            flex: 1;
+            padding: 32px 40px;
+            max-width: 900px;
+        }
+
+        .course-player-content {
+            min-height: 400px;
+        }
+
+        .text-lesson-content {
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .text-lesson-content h4 {
+            margin-bottom: 16px;
+        }
+
+        .text-lesson-content h5 {
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        .text-lesson-content ul {
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .text-lesson-content li {
+            margin-bottom: 8px;
+        }
+
+        .quiz-question .form-check-input:checked {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        #courseCompleteAlert {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            border: none;
+        }
+
+        #courseCompleteAlert a {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        #toggleSidebar {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1050;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 991px) {
+            .player-sidebar {
+                position: fixed;
+                left: -340px;
+                top: 72px;
+                z-index: 1040;
+                transition: left 0.3s ease;
+            }
+
+            .player-sidebar.show {
+                left: 0;
+                box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+            }
+
+            .player-main {
+                padding: 24px 16px;
+                width: 100%;
+            }
+
+            #toggleSidebar {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Main navigation">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand-logo" href="index.html"><img src="assets/images/logo/novio-logo.png" alt="Novio"
+                    class="logo-img"></a>
+            <div class="d-flex align-items-center gap-3 ms-auto">
+                <a href="my-courses.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-arrow-left me-1"></i>
+                    My Courses</a>
+                <a href="cart.html" class="btn btn-icon position-relative" aria-label="Cart"><i
+                        class="bi bi-cart3"></i><span class="cart-badge badge" data-count="0">0</span></a>
+                <div class="dropdown d-none" id="accountDropdown">
+                    <a href="#" class="btn btn-icon dropdown-toggle" id="accountBtn" data-bs-toggle="dropdown"
+                        aria-expanded="false" aria-label="Account"><i class="bi bi-person-circle"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end account-dropdown">
+                        <li><a class="dropdown-item" href="account.html"><i class="bi bi-person"></i> Profile</a></li>
+                        <li><a class="dropdown-item" href="my-courses.html"><i class="bi bi-book"></i> My Courses</a>
+                        </li>
+                        <li><a class="dropdown-item" href="achievements.html"><i class="bi bi-trophy"></i>
+                                Achievements</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#" id="logoutBtn"><i
+                                    class="bi bi-box-arrow-right"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="player-layout" id="coursePlayerPage">
+        <aside class="player-sidebar">
+            <div class="player-sidebar-header">
+                <h6 id="playerCourseTitle">Loading...</h6>
+                <small id="playerInstructor"></small>
+            </div>
+            <div class="progress-section">
+                <div class="d-flex justify-content-between mb-1">
+                    <small class="fw-semibold" id="progressText">0% Complete</small>
+                </div>
+                <div class="progress" style="height: 6px;">
+                    <div class="progress-bar" id="progressBar" role="progressbar"
+                        style="width: 0%; background: linear-gradient(135deg, var(--primary), var(--accent));"
+                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div id="lessonsList"></div>
+        </aside>
+
+        <main class="player-main">
+            <div class="alert d-none mb-4" id="courseCompleteAlert">
+                <i class="bi bi-trophy-fill me-2"></i>
+                <strong>Course Complete!</strong> Congratulations! You've finished all lessons.
+                <a href="#" id="getCertLink" class="ms-2">Get Your Certificate <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="course-player-content" id="lessonContent">
+                <div class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status"><span
+                            class="visually-hidden">Loading...</span></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <button id="toggleSidebar" aria-label="Toggle lessons sidebar"><i class="bi bi-list"></i></button>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/account.js"></script>
+    <script src="assets/js/course-player.js"></script>
+</body>
+
+</html>

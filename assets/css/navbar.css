@@ -234,7 +234,6 @@
   }
 
   .mobile-social-links a:hover {
-    background: var(--primary);
     border-color: var(--primary);
     color: #fff;
   }

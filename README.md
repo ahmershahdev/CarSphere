@@ -33,7 +33,9 @@ Novio is a premium online tech courses platform designed to empower learners wor
 - **Premium UI** — Gradient buttons, smooth animations, glassmorphism navbar, testimonial carousel with 15 reviews
 - **SEO Optimized** — Unique meta titles/descriptions, Open Graph, Twitter Cards, JSON-LD structured data on every page, sitemap.xml, robots.txt
 - **Accessibility** — ARIA attributes on all forms, navigation, landmarks, and interactive elements
-- **Performance** — Deferred script loading, lazy-loaded images, CSS architecture split into 16 modular files
+- **Premium Certificates** — Gold-accented course completion certificates with watermark, seal, ornaments, and Novio logo
+- **Credential Verification** — Public verification page for validating certificate authenticity via unique certificate IDs
+- **Performance** — Deferred script loading, lazy-loaded images, locally hosted WebP images, CSS architecture split into 16 modular files
 - **Form Validation** — Regex patterns, min/max length, input types, and autocomplete attributes on all form fields
 
 ## Tech Stack
@@ -84,6 +86,8 @@ novio/
 ├── privacy-policy.html         # Privacy policy
 ├── terms-of-service.html       # Terms of service
 ├── refund-policy.html          # Refund policy
+├── certificate.html            # Course completion certificate
+├── verify-certificate.html     # Public credential verification
 ├── accessibility.html          # Accessibility statement
 ├── sitemap.xml                 # XML sitemap
 ├── robots.txt                  # Robots directives
@@ -107,6 +111,11 @@ novio/
     │   ├── responsive.css      # Media queries
     │   └── bootstrap.min.css   # Bootstrap 5
     ├── images/
+    │   ├── courses/            # Course thumbnail images (WebP)
+    │   ├── instructors/        # Instructor profile images (WebP)
+    │   ├── reviewers/          # Reviewer avatar images (WebP)
+    │   ├── hero/               # Hero & about images (WebP)
+    │   ├── blog/               # Blog post images (WebP)
     │   ├── favicon/            # Favicon files
     │   └── logo/               # Logo assets
     └── js/
@@ -118,6 +127,8 @@ novio/
         ├── cart-page.js        # Cart & payment logic
         ├── auth-forms.js       # Login, signup, forgot password
         ├── account.js          # Account dashboard
+        ├── account-pages.js    # Account sub-pages (my-courses, etc.)
+        ├── certificate.js      # Certificate generation & display
         ├── animations.js       # Typing effect & scroll animations
         ├── nav-search.js       # Navbar search suggestions
         └── bootstrap.bundle.min.js
@@ -140,12 +151,13 @@ The CSS is split into **16 modular files** for maintainability:
 
 ## localStorage Schema
 
-| Key                 | Type   | Description                                                 |
-| ------------------- | ------ | ----------------------------------------------------------- |
-| `novio_users`       | Array  | Registered user accounts                                    |
-| `novio_user`        | Object | Currently logged-in user                                    |
-| `novio_cart`        | Array  | Cart items (id, title, image, price, instructor)            |
-| `novio_enrollments` | Array  | Enrolled courses (id, title, image, enrolledDate, progress) |
+| Key                  | Type   | Description                                                         |
+| -------------------- | ------ | ------------------------------------------------------------------- |
+| `novio_users`        | Array  | Registered user accounts                                            |
+| `novio_user`         | Object | Currently logged-in user                                            |
+| `novio_cart`         | Array  | Cart items (id, title, image, price, instructor)                    |
+| `novio_enrollments`  | Array  | Enrolled courses (id, title, image, enrolledDate, progress)         |
+| `novio_certificates` | Array  | Course completion certificates (certId, courseId, name, date, etc.) |
 
 ## Getting Started
 

@@ -22,15 +22,15 @@ $(function () {
         item.title +
         "</span>" +
         "</div>" +
-        '<span class="fw-semibold">$' +
-        item.price.toFixed(2) +
+        '<span class="fw-semibold">PKR ' +
+        item.price.toLocaleString() +
         "</span>" +
         "</div>";
     });
 
     $("#paymentOrderItems").html(orderHtml);
-    $("#paymentSubtotal").text("$" + subtotal.toFixed(2));
-    $("#paymentTotal").text("$" + subtotal.toFixed(2));
+    $("#paymentSubtotal").text("PKR " + subtotal.toLocaleString());
+    $("#paymentTotal").text("PKR " + subtotal.toLocaleString());
 
     var user = getCurrentUser();
     if (user) {
@@ -130,8 +130,8 @@ function renderCart() {
       item.instructor +
       "</p>" +
       "</div>" +
-      '<span class="cart-item-price">$' +
-      item.price.toFixed(2) +
+      '<span class="cart-item-price">PKR ' +
+      item.price.toLocaleString() +
       "</span>" +
       '<button class="btn-remove" onclick="removeCartItem(' +
       item.id +
@@ -141,8 +141,8 @@ function renderCart() {
 
   $("#cartItems").html(html);
   $("#cartSummary").removeClass("d-none");
-  $("#cartSubtotal").text("$" + subtotal.toFixed(2));
-  $("#cartTotal").text("$" + subtotal.toFixed(2));
+  $("#cartSubtotal").text("PKR " + subtotal.toLocaleString());
+  $("#cartTotal").text("PKR " + subtotal.toLocaleString());
   $("#cartCount").text(cart.length + " course" + (cart.length > 1 ? "s" : ""));
 }
 

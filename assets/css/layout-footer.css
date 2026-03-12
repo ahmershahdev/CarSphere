@@ -66,7 +66,6 @@
 }
 
 .footer .social-links a:hover {
-  background: var(--primary);
   border-color: var(--primary);
   color: #fff;
   transform: translateY(-2px);

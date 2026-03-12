@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get your course completion certificate from Novio.">
+    <meta name="author" content="Syed Ahmer Shah">
+    <title>Certificate | NOVIO</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages-browse.css">
+    <link rel="stylesheet" href="assets/css/pages-account.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/layout-search.css">
+    <link rel="stylesheet" href="assets/css/layout-footer.css">
+    <link rel="stylesheet" href="assets/css/layout-menus.css">
+    <link rel="stylesheet" href="assets/css/layout-menus.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .certificate-display {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .certificate {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        .cert-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.04;
+            font-size: 12rem;
+            font-weight: 900;
+            letter-spacing: 12px;
+            color: var(--primary);
+            pointer-events: none;
+            user-select: none;
+            white-space: nowrap;
+            z-index: 0;
+        }
+
+        .cert-border {
+            border: 4px solid transparent;
+            border-image: linear-gradient(135deg, #c9a84c, #f0d878, #c9a84c, #a67c2e) 1;
+            margin: 14px;
+            position: relative;
+        }
+
+        .cert-corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-color: #c9a84c;
+            z-index: 1;
+        }
+
+        .cert-corner.tl {
+            top: -2px;
+            left: -2px;
+            border-top: 3px solid;
+            border-left: 3px solid;
+        }
+
+        .cert-corner.tr {
+            top: -2px;
+            right: -2px;
+            border-top: 3px solid;
+            border-right: 3px solid;
+        }
+
+        .cert-corner.bl {
+            bottom: -2px;
+            left: -2px;
+            border-bottom: 3px solid;
+            border-left: 3px solid;
+        }
+
+        .cert-corner.br {
+            bottom: -2px;
+            right: -2px;
+            border-bottom: 3px solid;
+            border-right: 3px solid;
+        }
+
+        .cert-inner {
+            padding: 56px 48px;
+            text-align: center;
+            border: 1px solid #e8dcc8;
+            margin: 10px;
+            border-radius: 4px;
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(180deg, #fffef8 0%, #ffffff 30%, #ffffff 70%, #fffef8 100%);
+        }
+
+        .cert-logo-img {
+            height: 48px;
+            margin-bottom: 8px;
+        }
+
+        .cert-ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .cert-ornament-line {
+            height: 1px;
+            width: 80px;
+            background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+        }
+
+        .cert-ornament-icon {
+            color: #c9a84c;
+            font-size: 1.25rem;
+        }
+
+        .cert-subtitle {
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: #c9a84c;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        .cert-title {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-top: 28px;
+        }
+
+        .cert-name {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin: 12px 0;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a2e, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cert-text {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .cert-course {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 8px 0 8px;
+        }
+
+        .cert-hours {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .cert-details {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #e8dcc8;
+            flex-wrap: wrap;
+        }
+
+        .cert-detail {
+            text-align: center;
+        }
+
+        .cert-detail span {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #c9a84c;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .cert-detail strong {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .cert-footer-sigs {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin-top: 32px;
+        }
+
+        .cert-signature {
+            text-align: center;
+        }
+
+        .sig-line {
+            width: 170px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #333, transparent);
+            margin: 0 auto 8px;
+        }
+
+        .cert-signature .sig-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        .cert-signature .sig-title {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .cert-verify-badge {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px dashed #e8dcc8;
+        }
+
+        .cert-verify-badge a {
+            color: var(--primary);
+            font-size: 0.8rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .cert-verify-badge a:hover {
+            text-decoration: underline;
+        }
+
+        .cert-qr-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .cert-seal {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #c9a84c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0.9;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .cert-seal i {
+            font-size: 1.5rem;
+            color: #c9a84c;
+        }
+
+        .cert-seal span {
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #c9a84c;
+            font-weight: 700;
+        }
+
+        .cert-form-card {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .cert-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            .certificate-display,
+            .certificate-display * {
+                visibility: visible;
+            }
+
+            .certificate-display {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+
+            .cert-actions,
+            nav,
+            footer,
+            .page-hero {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .cert-inner {
+                padding: 28px 16px;
+            }
+
+            .cert-name {
+                font-size: 1.75rem;
+            }
+
+            .cert-course {
+                font-size: 1.15rem;
+            }
+
+            .cert-details {
+                gap: 20px;
+            }
+
+            .cert-footer-sigs {
+                gap: 40px;
+            }
+
+            .sig-line {
+                width: 100px;
+            }
+
+            .cert-seal {
+                width: 56px;
+                height: 56px;
+                bottom: 30px;
+                right: 30px;
+            }
+
+            .cert-seal i {
+                font-size: 1rem;
+            }
+
+            .cert-watermark {
+                font-size: 6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand-logo" href="index.html">
+                <img src="assets/images/logo/novio-logo.png" alt="Novio" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav"
+                aria-controls="mobileNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mobileNav">
+                <div class="navbar-inner">
+                    <div class="navbar-search">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search courses..."
+                            aria-label="Search courses" role="searchbox">
+                        <div class="nav-search-suggestions"></div>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Explore</a>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="container">
+                                    <div class="row g-4 p-3">
+                                        <div class="col-lg-3 col-md-6">
+                                            <h6 class="mega-menu-title"><i class="bi bi-fire"></i> Popular Categories
+                                            </h6>
+                                            <ul class="mega-menu-list">
+                                                <li><a href="courses.html"><i class="bi bi-code-slash"></i> Web
+                                                        Development</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-graph-up"></i> Data
+                                                        Science</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-robot"></i> Artificial
+                                                        Intelligence</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-shield-lock"></i>
+                                                        Cybersecurity</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <h6 class="mega-menu-title"><i class="bi bi-signpost-split"></i> Learning
+                                                Paths</h6>
+                                            <ul class="mega-menu-list">
+                                                <li><a href="courses.html"><i class="bi bi-cloud"></i> Cloud
+                                                        Computing</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-phone"></i> Mobile
+                                                        Development</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-palette"></i> UI/UX
+                                                        Design</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-gear"></i> DevOps</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <h6 class="mega-menu-title"><i class="bi bi-building"></i> Company</h6>
+                                            <ul class="mega-menu-list">
+                                                <li><a href="about.html"><i class="bi bi-info-circle"></i> About
+                                                        Novio</a></li>
+                                                <li><a href="contact.html"><i class="bi bi-envelope"></i> Contact Us</a>
+                                                </li>
+                                                <li><a href="careers.html"><i class="bi bi-briefcase"></i> Careers</a>
+                                                </li>
+                                                <li><a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <h6 class="mega-menu-title"><i class="bi bi-box"></i> Resources</h6>
+                                            <ul class="mega-menu-list">
+                                                <li><a href="novio-plus.html"><i class="bi bi-stars"></i> Novio Plus</a>
+                                                </li>
+                                                <li><a href="catalog.html"><i class="bi bi-grid"></i> Catalog</a></li>
+                                                <li><a href="affiliates.html"><i class="bi bi-people"></i>
+                                                        Affiliates</a></li>
+                                                <li><a href="help-center.html"><i class="bi bi-question-circle"></i>
+                                                        Help Center</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mobile-menu-extras">
+                        <p class="mobile-menu-section-title">Quick Links</p>
+                        <div class="mobile-quick-links">
+                            <a href="about.html"><i class="bi bi-info-circle"></i> About</a>
+                            <a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a>
+                            <a href="careers.html"><i class="bi bi-briefcase"></i> Careers</a>
+                            <a href="help-center.html"><i class="bi bi-question-circle"></i> Help</a>
+                            <a href="catalog.html"><i class="bi bi-grid"></i> Catalog</a>
+                            <a href="novio-plus.html"><i class="bi bi-stars"></i> Novio Plus</a>
+                            <a href="podcast.html"><i class="bi bi-mic"></i> Podcast</a>
+                            <a href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+                        </div>
+                        <p class="mobile-menu-section-title">Follow Us</p>
+                        <div class="mobile-social-links">
+                            <a href="https://facebook.com/ahmershah29" target="_blank" rel="noopener"
+                                aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://x.com/ahmershah29" target="_blank" rel="noopener" aria-label="X"><i
+                                    class="bi bi-twitter-x"></i></a>
+                            <a href="https://linkedin.com/in/syedahmershah" target="_blank" rel="noopener"
+                                aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/ahmershahdev" target="_blank" rel="noopener"
+                                aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="https://youtube.com/@ahmershahdev" target="_blank" rel="noopener"
+                                aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="cart.html" class="btn btn-icon position-relative" aria-label="Cart">
+                            <i class="bi bi-cart3"></i>
+                            <span class="cart-badge badge" data-count="0">0</span>
+                        </a>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm" id="loginBtn">Log In</a>
+                        <a href="signup.html" class="btn btn-primary btn-sm" id="signupBtn">Sign Up</a>
+                        <div class="dropdown d-none" id="accountDropdown">
+                            <a href="#" class="btn btn-icon dropdown-toggle" id="accountBtn" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-label="Account">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end account-dropdown">
+                                <li><a class="dropdown-item" href="account.html"><i class="bi bi-person"></i>
+                                        Profile</a></li>
+                                <li><a class="dropdown-item" href="my-courses.html"><i class="bi bi-book"></i> My
+                                        Courses</a></li>
+                                <li><a class="dropdown-item" href="purchases.html"><i class="bi bi-bag"></i> My
+                                        Purchases</a></li>
+                                <li><a class="dropdown-item" href="achievements.html"><i class="bi bi-trophy"></i>
+                                        Accomplishments</a></li>
+                                <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear"></i>
+                                        Settings</a></li>
+                                <li><a class="dropdown-item" href="updates.html"><i class="bi bi-bell"></i> Updates</a>
+                                </li>
+                                <li><a class="dropdown-item" href="help-center.html"><i
+                                            class="bi bi-question-circle"></i> Help Center</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="#" id="logoutBtn"><i
+                                            class="bi bi-box-arrow-right"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-badge">Achievement</span>
+            <h1>Course Certificate</h1>
+            <p>Your proof of accomplishment</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="my-courses.html">My Courses</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Certificate</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section class="py-5" id="certificatePage">
+        <div class="container">
+            <div id="certificateContent">
+                <div class="cert-form-card card border-0 shadow-sm p-4 d-none" id="certificateForm">
+                    <div class="text-center mb-4">
+                        <i class="bi bi-award" style="font-size: 3rem; color: var(--primary);"></i>
+                        <h4 class="fw-bold mt-2">Generate Your Certificate</h4>
+                        <p class="text-muted">Course: <strong id="certCourseName"></strong></p>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="certName" class="form-label fw-semibold">Your Full Name</label>
+                            <input type="text" class="form-control form-control-lg" id="certName"
+                                placeholder="Enter your name as it should appear on the certificate" required>
+                            <small class="text-muted">This name will be displayed on your certificate</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            <i class="bi bi-award me-2"></i>Generate Certificate
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/account.js"></script>
+    <script src="assets/js/nav-search.js"></script>
+    <script src="assets/js/certificate.js"></script>
+</body>
+
+</html>

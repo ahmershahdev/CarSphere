@@ -210,6 +210,18 @@ $(function () {
           '<span class="progress-text">' +
           item.progress +
           "% complete</span>" +
+          '<a href="' +
+          (item.progress >= 100
+            ? "certificate.html?id="
+            : "course-player.html?id=") +
+          item.id +
+          '" class="btn btn-primary btn-sm mt-2">' +
+          (item.progress >= 100
+            ? "View Certificate"
+            : item.progress > 0
+              ? "Continue Learning"
+              : "Start Course") +
+          "</a>" +
           "</div>" +
           "</div>";
       });
@@ -228,4 +240,138 @@ $(function () {
     e.preventDefault();
     logoutUser();
   });
+
+  // Settings page logic
+  if ($("#profile-settings").length) {
+    var user = getCurrentUser();
+    if (user) {
+      $("#settingsName").val(user.name || "");
+      $("#settingsEmail").val(user.email || "");
+    }
+
+    // Sidebar nav smooth scroll
+    $(".nav.flex-column a").on("click", function (e) {
+      e.preventDefault();
+      $(".nav.flex-column a")
+        .removeClass("active")
+        .css({ background: "", color: "" })
+        .addClass("text-secondary");
+      $(this)
+        .addClass("active")
+        .removeClass("text-secondary")
+        .css({ background: "var(--primary-light)", color: "var(--primary)" });
+      var target = $(this).attr("href");
+      if ($(target).length) {
+        $("html, body").animate(
+          { scrollTop: $(target).offset().top - 100 },
+          400,
+        );
+      }
+    });
+
+    // Save profile
+    $("#profile-settings .btn-primary").on("click", function () {
+      var user = getCurrentUser();
+      if (!user) {
+        showToast("Please log in first", "error");
+        return;
+      }
+      user.name = $("#settingsName").val().trim();
+      setCurrentUser(user);
+      var users = JSON.parse(localStorage.getItem("novio_users") || "[]");
+      var idx = users.findIndex(function (u) {
+        return u.email === user.email;
+      });
+      if (idx !== -1) users[idx] = user;
+      localStorage.setItem("novio_users", JSON.stringify(users));
+      showToast("Profile settings saved!", "success");
+    });
+
+    // Update password
+    $("#btnUpdatePassword").on("click", function () {
+      var user = getCurrentUser();
+      if (!user) {
+        showToast("Please log in first", "error");
+        return;
+      }
+      var newPass = $("#settingsNewPass").val();
+      var confirmPass = $("#settingsConfirmPass").val();
+      if (newPass.length < 8) {
+        showToast("Password must be at least 8 characters", "error");
+        return;
+      }
+      if (newPass !== confirmPass) {
+        showToast("Passwords do not match", "error");
+        return;
+      }
+      user.password = newPass;
+      setCurrentUser(user);
+      var users = JSON.parse(localStorage.getItem("novio_users") || "[]");
+      var idx = users.findIndex(function (u) {
+        return u.email === user.email;
+      });
+      if (idx !== -1) users[idx] = user;
+      localStorage.setItem("novio_users", JSON.stringify(users));
+      showToast("Password updated!", "success");
+      $("#settingsNewPass, #settingsConfirmPass").val("");
+    });
+
+    // Save privacy
+    $("#btnSavePrivacy").on("click", function () {
+      var settings = {
+        profileVisible: $("#profileVisibility").is(":checked"),
+        showProgress: $("#showProgress").is(":checked"),
+        activityStatus: $("#activityStatus").is(":checked"),
+      };
+      localStorage.setItem("novio_privacy", JSON.stringify(settings));
+      showToast("Privacy settings saved!", "success");
+    });
+
+    // Load privacy settings
+    try {
+      var privacy = JSON.parse(localStorage.getItem("novio_privacy") || "{}");
+      if (privacy.profileVisible !== undefined)
+        $("#profileVisibility").prop("checked", privacy.profileVisible);
+      if (privacy.showProgress !== undefined)
+        $("#showProgress").prop("checked", privacy.showProgress);
+      if (privacy.activityStatus !== undefined)
+        $("#activityStatus").prop("checked", privacy.activityStatus);
+    } catch (e) {}
+
+    // Load billing history
+    try {
+      var enrollments = JSON.parse(
+        localStorage.getItem("novio_enrollments") || "[]",
+      );
+      if (enrollments.length > 0) {
+        var billingHtml = '<div class="list-group">';
+        enrollments.forEach(function (item) {
+          var course =
+            typeof coursesData !== "undefined"
+              ? coursesData.find(function (c) {
+                  return c.id === item.id;
+                })
+              : null;
+          var price = course ? "PKR " + course.price.toLocaleString() : "N/A";
+          var date = new Date(item.enrolledDate).toLocaleDateString("en-PK", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          });
+          billingHtml +=
+            '<div class="list-group-item d-flex justify-content-between align-items-center">' +
+            "<div><strong>" +
+            item.title +
+            '</strong><br><small class="text-muted">' +
+            date +
+            "</small></div>" +
+            '<span class="fw-semibold text-primary">' +
+            price +
+            "</span></div>";
+        });
+        billingHtml += "</div>";
+        $("#billingHistory").html(billingHtml);
+      }
+    } catch (e) {}
+  }
 });

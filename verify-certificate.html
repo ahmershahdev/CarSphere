@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Verify a Novio course completion certificate. Enter a certificate ID to confirm its authenticity.">
+    <meta name="author" content="Syed Ahmer Shah">
+    <meta name="robots" content="index, follow">
+    <title>Verify Certificate | NOVIO</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages-browse.css">
+    <link rel="stylesheet" href="assets/css/pages-account.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/layout-search.css">
+    <link rel="stylesheet" href="assets/css/layout-footer.css">
+    <link rel="stylesheet" href="assets/css/layout-menus.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .verify-card {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .verify-result {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .verify-success {
+            border-left: 4px solid var(--secondary);
+            background: #f0fdf4;
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .verify-fail {
+            border-left: 4px solid var(--danger);
+            background: #fef2f2;
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .cert-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .cert-info-item {
+            padding: 12px;
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .cert-info-item label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .cert-info-item strong {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 575px) {
+            .cert-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand-logo" href="index.html">
+                <img src="assets/images/logo/novio-logo.png" alt="Novio" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav"
+                aria-controls="mobileNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mobileNav">
+                <div class="navbar-inner">
+                    <div class="navbar-search">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search courses..."
+                            aria-label="Search courses" role="searchbox">
+                        <div class="nav-search-suggestions"></div>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Explore</a>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="container">
+                                    <div class="row g-4 p-3">
+                                        <div class="col-lg-3 col-md-6">
+                                            <h6 class="mega-menu-title"><i class="bi bi-fire"></i> Popular Categories
+                                            </h6>
+                                            <ul class="mega-menu-list">
+                                                <li><a href="courses.html"><i class="bi bi-code-slash"></i> Web
+                                                        Development</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-graph-up"></i> Data
+                                                        Science</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-robot"></i> Artificial
+                                                        Intelligence</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-shield-lock"></i>
+                                                        Cybersecurity</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <h6 class="mega-menu-title"><i class="bi bi-signpost-split"></i> Learning
+                                                Paths</h6>
+                                            <ul class="mega-menu-list">
+                                                <li><a href="courses.html"><i class="bi bi-cloud"></i> Cloud
+                                                        Computing</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-phone"></i> Mobile
+                                                        Development</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-palette"></i> UI/UX
+                                                        Design</a></li>
+                                                <li><a href="courses.html"><i class="bi bi-gear"></i> DevOps</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <h6 class="mega-menu-title"><i class="bi bi-building"></i> Company</h6>
+                                            <ul class="mega-menu-list">
+                                                <li><a href="about.html"><i class="bi bi-info-circle"></i> About
+                                                        Novio</a></li>
+                                                <li><a href="contact.html"><i class="bi bi-envelope"></i> Contact Us</a>
+                                                </li>
+                                                <li><a href="careers.html"><i class="bi bi-briefcase"></i> Careers</a>
+                                                </li>
+                                                <li><a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <h6 class="mega-menu-title"><i class="bi bi-box"></i> Resources</h6>
+                                            <ul class="mega-menu-list">
+                                                <li><a href="novio-plus.html"><i class="bi bi-stars"></i> Novio Plus</a>
+                                                </li>
+                                                <li><a href="catalog.html"><i class="bi bi-grid"></i> Catalog</a></li>
+                                                <li><a href="affiliates.html"><i class="bi bi-people"></i>
+                                                        Affiliates</a></li>
+                                                <li><a href="help-center.html"><i class="bi bi-question-circle"></i>
+                                                        Help Center</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mobile-menu-extras">
+                        <p class="mobile-menu-section-title">Quick Links</p>
+                        <div class="mobile-quick-links">
+                            <a href="about.html"><i class="bi bi-info-circle"></i> About</a>
+                            <a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a>
+                            <a href="careers.html"><i class="bi bi-briefcase"></i> Careers</a>
+                            <a href="help-center.html"><i class="bi bi-question-circle"></i> Help</a>
+                            <a href="catalog.html"><i class="bi bi-grid"></i> Catalog</a>
+                            <a href="novio-plus.html"><i class="bi bi-stars"></i> Novio Plus</a>
+                            <a href="podcast.html"><i class="bi bi-mic"></i> Podcast</a>
+                            <a href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+                        </div>
+                        <p class="mobile-menu-section-title">Follow Us</p>
+                        <div class="mobile-social-links">
+                            <a href="https://facebook.com/ahmershah29" target="_blank" rel="noopener"
+                                aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://x.com/ahmershah29" target="_blank" rel="noopener" aria-label="X"><i
+                                    class="bi bi-twitter-x"></i></a>
+                            <a href="https://linkedin.com/in/syedahmershah" target="_blank" rel="noopener"
+                                aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/ahmershahdev" target="_blank" rel="noopener"
+                                aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="https://youtube.com/@ahmershahdev" target="_blank" rel="noopener"
+                                aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="cart.html" class="btn btn-icon position-relative" aria-label="Cart">
+                            <i class="bi bi-cart3"></i>
+                            <span class="cart-badge badge" data-count="0">0</span>
+                        </a>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm" id="loginBtn">Log In</a>
+                        <a href="signup.html" class="btn btn-primary btn-sm" id="signupBtn">Sign Up</a>
+                        <div class="dropdown d-none" id="accountDropdown">
+                            <a href="#" class="btn btn-icon dropdown-toggle" id="accountBtn" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-label="Account">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end account-dropdown">
+                                <li><a class="dropdown-item" href="account.html"><i class="bi bi-person"></i>
+                                        Profile</a></li>
+                                <li><a class="dropdown-item" href="my-courses.html"><i class="bi bi-book"></i> My
+                                        Courses</a></li>
+                                <li><a class="dropdown-item" href="purchases.html"><i class="bi bi-bag"></i> My
+                                        Purchases</a></li>
+                                <li><a class="dropdown-item" href="achievements.html"><i class="bi bi-trophy"></i>
+                                        Accomplishments</a></li>
+                                <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear"></i>
+                                        Settings</a></li>
+                                <li><a class="dropdown-item" href="updates.html"><i class="bi bi-bell"></i> Updates</a>
+                                </li>
+                                <li><a class="dropdown-item" href="help-center.html"><i
+                                            class="bi bi-question-circle"></i> Help Center</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="#" id="logoutBtn"><i
+                                            class="bi bi-box-arrow-right"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-badge">Verification</span>
+            <h1>Verify Certificate</h1>
+            <p>Confirm the authenticity of a Novio certificate</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Verify Certificate</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="verify-card card border-0 shadow-sm p-4 mb-4" id="verifyForm">
+                <div class="text-center mb-4">
+                    <i class="bi bi-patch-check" style="font-size: 3rem; color: var(--primary);"></i>
+                    <h4 class="fw-bold mt-2">Certificate Verification</h4>
+                    <p class="text-muted">Enter the certificate ID to verify its authenticity</p>
+                </div>
+                <form id="verifyCertForm">
+                    <div class="mb-3">
+                        <label for="verifyCertId" class="form-label fw-semibold">Certificate ID</label>
+                        <input type="text" class="form-control form-control-lg" id="verifyCertId"
+                            placeholder="e.g. NOVIO-1-M3X7YZ" required>
+                        <small class="text-muted">You can find the certificate ID at the bottom of the
+                            certificate</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                        <i class="bi bi-search me-2"></i>Verify Certificate
+                    </button>
+                </form>
+            </div>
+            <div class="verify-result" id="verifyResult"></div>
+        </div>
+    </section>
+
+    <footer class="footer" role="contentinfo" aria-label="Site footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo/novio-logo.png" alt="Novio" class="logo-img">
+                    </div>
+                    <p>Empowering learners worldwide with premium tech courses from industry experts.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/ahmershah29" aria-label="Facebook" target="_blank"
+                            rel="noopener"><i class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/ahmershah29" aria-label="X" target="_blank" rel="noopener"><i
+                                class="bi bi-twitter-x"></i></a>
+                        <a href="https://linkedin.com/in/syedahmershah" aria-label="LinkedIn" target="_blank"
+                            rel="noopener"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/ahmershahdev" aria-label="GitHub" target="_blank" rel="noopener"><i
+                                class="bi bi-github"></i></a>
+                        <a href="https://youtube.com/@ahmershahdev" aria-label="YouTube" target="_blank"
+                            rel="noopener"><i class="bi bi-youtube"></i></a>
+                        <a href="https://ahmershah.dev/" aria-label="Portfolio" target="_blank" rel="noopener"><i
+                                class="bi bi-globe2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Novio</h6>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="novio-plus.html">Novio Plus</a></li>
+                        <li><a href="courses.html">Professional Certificates</a></li>
+                        <li><a href="courses.html">MasterTrack&reg; Certificates</a></li>
+                        <li><a href="courses.html">Degrees</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Community</h6>
+                    <ul>
+                        <li><a href="learners.html">Learners</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="beta-testers.html">Beta Testers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="podcast.html">The Novio Podcast</a></li>
+                        <li><a href="tech-blog.html">Tech Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>More</h6>
+                    <ul>
+                        <li><a href="press.html">Press</a></li>
+                        <li><a href="investors.html">Investors</a></li>
+                        <li><a href="terms-of-service.html">Terms</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                        <li><a href="help-center.html">Help</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="affiliates.html">Affiliates</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6>Newsletter</h6>
+                    <p>Stay updated with new courses and exclusive offers.</p>
+                    <form class="newsletter-form" aria-label="Newsletter subscription">
+                        <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter"
+                            autocomplete="email">
+                        <button type="submit" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Novio Inc. All rights reserved.</p>
+                <p>Made by Syed Ahmer Shah</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/nav-search.js"></script>
+    <script>
+        $(function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var certIdFromUrl = urlParams.get('id');
+            if (certIdFromUrl) {
+                $('#verifyCertId').val(certIdFromUrl);
+                verifyCert(certIdFromUrl);
+            }
+
+            $('#verifyCertForm').on('submit', function (e) {
+                e.preventDefault();
+                var certId = $('#verifyCertId').val().trim();
+                if (!certId) return;
+                verifyCert(certId);
+            });
+
+            function verifyCert(certId) {
+                var certificates = JSON.parse(localStorage.getItem('novio_certificates') || '[]');
+                var cert = certificates.find(function (c) { return c.certId === certId; });
+
+                if (cert) {
+                    var date = new Date(cert.issueDate).toLocaleDateString('en-US', {
+                        year: 'numeric', month: 'long', day: 'numeric'
+                    });
+                    $('#verifyResult').html(
+                        '<div class="verify-success">' +
+                        '<div class="d-flex align-items-center gap-2 mb-3">' +
+                        '<i class="bi bi-patch-check-fill text-success" style="font-size:2rem;"></i>' +
+                        '<div><h5 class="mb-0 text-success">Certificate Verified</h5><small class="text-muted">This certificate is authentic and was issued by Novio.</small></div>' +
+                        '</div>' +
+                        '<div class="cert-info-grid">' +
+                        '<div class="cert-info-item"><label>Recipient</label><strong>' + cert.recipientName + '</strong></div>' +
+                        '<div class="cert-info-item"><label>Course</label><strong>' + cert.courseName + '</strong></div>' +
+                        '<div class="cert-info-item"><label>Instructor</label><strong>' + cert.instructor + '</strong></div>' +
+                        '<div class="cert-info-item"><label>Category</label><strong>' + cert.category + '</strong></div>' +
+                        '<div class="cert-info-item"><label>Date Issued</label><strong>' + date + '</strong></div>' +
+                        '<div class="cert-info-item"><label>Certificate ID</label><strong>' + cert.certId + '</strong></div>' +
+                        '</div></div>'
+                    );
+                } else {
+                    $('#verifyResult').html(
+                        '<div class="verify-fail">' +
+                        '<div class="d-flex align-items-center gap-2 mb-2">' +
+                        '<i class="bi bi-x-circle-fill text-danger" style="font-size:2rem;"></i>' +
+                        '<div><h5 class="mb-0 text-danger">Certificate Not Found</h5><small class="text-muted">No certificate with this ID was found in our records.</small></div>' +
+                        '</div>' +
+                        '<p class="mt-2 mb-0 small text-muted">Please double-check the certificate ID and try again. If you believe this is an error, please <a href="contact.html">contact us</a>.</p>' +
+                        '</div>'
+                    );
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
